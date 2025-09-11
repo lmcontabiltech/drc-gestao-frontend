@@ -1,0 +1,128 @@
+<p>colaboradores works!</p>
+<div  *ngIf="permissaoUsuario === 'Administrador' || permissaoUsuario === 'Coordenador' || permissaoUsuario === 'Estagiario'">
+<div class="main-container">
+    <div class="header-container">
+        <h2>Colaboradores</h2>
+        <div class="btn-container">
+            <button class="btn btn-secondary" (click)="historicoColaborador()">Histórico de usuários</button>
+            <button class="btn btn-primary" (click)="cadastrarColaborador()">Cadastrar colaborador +</button>
+        </div>
+    </div>
+
+    <div class="table-container">
+        <div class="filtro-container">
+            <div class="select-container">
+                <app-select-padrao
+                  label="Setor"
+                  [options]="setores"
+                  [(selectedValue)]="selectedSetor"
+                  (selectedValueChange)="onSetorChange()"
+                  [showDefaultOption]="true"
+                  [defaultLabel]="'Todos os setores'"
+                  [defaultValue]="''">
+                </app-select-padrao>
+            </div>
+
+            <div class="acoes-container">
+                <div class="search-container">
+                    <app-search (searchChange)="onSearch($event)"></app-search>
+                </div>
+
+                <button class="btn btn-outline" (click)="exportCsv()" [disabled]="isExporting">
+                    {{ isExporting ? 'Carregando...' : 'Exportar' }}
+                </button>
+            </div>
+        </div>
+
+        <div *ngIf="successMessage" class="alert alert-success">
+            <span>{{ successMessage }}</span>
+            <button class="close-btn" (click)="clearMessage()" aria-label="Fechar">&times;</button>
+            <div class="progress-bar-sucess" [style.animation]="successMessage ? 'progressBarAnim 3s linear' : 'none'"></div>
+        </div>
+
+        <div class="progress-bar-container" *ngIf="isLoading">
+            <div class="progress-bar"></div>
+        </div>
+
+        <div [ngClass]="{'tabela-container': true, 'no-data': colaboradoresPaginados.length === 0}">
+            <table>
+                <thead>
+                    <tr>
+                        <th>
+                            <div class="th-filter">
+                                 Nome
+                                <button class="seta-btn" (click)="alternarOrdenacaoNome()" [class.asc]="ordenacaoNome === 'asc'" [class.desc]="ordenacaoNome === 'desc'" title="Ordenar por nome">
+                                    <span class="seta-icones">
+                                        <span [class.ativo]="ordenacaoNome === 'asc'">&#9650;</span>
+                                        <span [class.ativo]="ordenacaoNome === 'desc'">&#9660;</span>
+                                    </span>
+                                </button>
+                            </div>
+                        </th>
+                        <th>Setor</th>
+                        <th>E-mail coorporativo</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody *ngIf="colaboradoresPaginados.length > 0">
+                    <tr *ngFor="let colaborador of colaboradoresPaginados">
+                        <td>
+                            <div class="perfil">
+                                <div class="avatar" [ngStyle]="{'background-color': getRandomColor(colaborador.nome)}">
+                                    <img [src]="colaborador.fotoUrl" alt="Foto do Colaborador" *ngIf="colaborador.fotoUrl; else defaultAvatar" />
+                                    <ng-template #defaultAvatar>
+                                        <span>{{ getInitial(colaborador.nome) }}</span>
+                                    </ng-template>
+                                </div>
+                                <span>
+                                    {{ colaborador.nome }}
+                                </span>
+                            </div>
+                        </td>
+                        <td>
+                            <app-setor-tag [setor]="colaborador.setor"></app-setor-tag>
+                        </td>
+                        <td>{{ colaborador.email }}</td>
+                        <td>
+                            <div class="container-acoes">
+                                <button class="btn-acao edit" (click)="editarColaborador(colaborador.id)">
+                                    <img src="assets/icones/edit.svg" alt="Editar">
+                                    Editar
+                                </button>
+                                <button class="btn-acao delete" (click)="openModalDeletar(colaborador)">
+                                    <img src="assets/icones/delete.svg" alt="Excluir">
+                                     Excluir
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div *ngIf="colaboradoresPaginados.length === 0" class="feedback-container">
+            <ng-container *ngIf="mensagemBusca; else semUsuarios">
+                <div>
+                <div class="search alert-warning text-center">
+                    {{ mensagemBusca }}
+                </div>
+                </div>
+            </ng-container>
+            <ng-template #semUsuarios>
+                <div class="no-data-message">
+                <img src="assets/imagens/no-data.svg" alt="Sem dados">
+                <p>Não há usuários cadastrados.</p>
+                </div>
+            </ng-template>
+        </div>
+
+        <div class="paginacao">
+            <app-pagination
+            [paginaAtual]="paginaAtual"
+            [totalItens]="totalItens"
+            [itensPorPagina]="itensPorPagina"
+            (paginaMudou)="onPaginaMudou($event)">
+            </app-pagination>
+        </div>  
+    </div>
+</div>
+</div>

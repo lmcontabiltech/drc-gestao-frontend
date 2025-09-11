@@ -1,10 +1,37 @@
-import { Component } from '@angular/core';
+import {
+  Component,
+  ViewChild,
+  ViewContainerRef,
+  AfterViewInit,
+} from '@angular/core';
+import { ThemeService } from './services/modo-escuro/theme.service';
+import { ModalDeleteService } from './services/modal/modal-deletar.service';
+import { ModalAtividadeService } from './services/modal/modal-atividade.service';
+import { ModalPadraoService } from './services/modal/modal-confirmacao.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'drc-app';
+  title = 'lm-app';
+
+  @ViewChild('modalOutlet', { read: ViewContainerRef, static: true })
+  modalOutlet!: ViewContainerRef;
+
+  constructor(
+    private themeService: ThemeService,
+    private modalDeleteService: ModalDeleteService,
+    private modalAtividadeService: ModalAtividadeService,
+    private modalPadraoService: ModalPadraoService
+  ) {
+    // O serviço será inicializado automaticamente pelo Angular
+  }
+
+  ngAfterViewInit(): void {
+    this.modalDeleteService.registerOutlet(this.modalOutlet);
+    this.modalAtividadeService.registerOutlet(this.modalOutlet);
+    this.modalPadraoService.registerOutlet(this.modalOutlet);
+  }
 }
