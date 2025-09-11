@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap");
+@import "~quill/dist/quill.snow.css";
 
 html,
 body {
@@ -28,16 +29,16 @@ html {
 }
 
 :root {
-  --drc-primary: #0B0B0B;
-  --drc-accent: #E5005C;
-  --drc-accent-02: #a9abae;
-  --drc-background: #e4e5eb;
-  --drc-bg-second: #fbfdfb;
-  --drc-sidebar-bg: #f9f9f9;
-  --drc-branco: #ffffff;
+  --lm-primary: #172973;
+  --lm-accent: #273e74;
+  --lm-accent-02: #a9abae;
+  --lm-background: #e4e5eb;
+  --lm-bg-second: #fbfdfb;
+  --lm-sidebar-bg: #f9f9f9;
+  --lm-branco: #ffffff;
   /* texto */
-  --drc-text: #37383c;
-  --drc-text02: #1a1918;
+  --lm-text: #37383c;
+  --lm-text02: #1a1918;
   /* sistema */
   --success: #5ea828;
   --info: #177ab8;
@@ -46,9 +47,9 @@ html {
   --info-hover: #1b88cc;
   --danger-hover: #d22536;
   /* borda */
-  --drc-border: #e0e0e0;
-  --drc-border02: #ced4da;
-  --drc-border03: #bfc4de;
+  --lm-border: #e0e0e0;
+  --lm-border02: #ced4da;
+  --lm-border03: #bfc4de;
   /* Buttons */
   --primary-button: #5ea828;
   --primary-btnHover: #1d7206;
