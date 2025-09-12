@@ -2,7 +2,7 @@
   margin: 120px 32px 24px;
   max-width: 100%;
   background: var(--form-background);
-  color: var(--lm-text);
+  color: var(--drc-text);
   border-radius: 24px;
   padding: 40px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -24,7 +24,7 @@
 .back-title span {
   font-size: 24px;
   font-weight: 500;
-  color: var(--lm-text);
+  color: var(--drc-text);
   margin-left: 12px;
 }
 
@@ -170,14 +170,14 @@ input:checked + .slider:before {
 .profile-name h4 {
   font-size: 26px;
   font-weight: 500;
-  color: var(--lm-text);
+  color: var(--drc-text);
   margin: 0;
 }
 
 .profile-name span {
   font-size: 16px;
   font-weight: 400;
-  color: var(--lm-text);
+  color: var(--drc-text);
   margin: 0;
 }
 
@@ -197,7 +197,7 @@ input:checked + .slider:before {
 .data-item label {
   font-size: 18px;
   font-weight: 500;
-  color: var(--lm-text);
+  color: var(--drc-text);
   margin: 0;
   padding: 0;
 }
@@ -205,7 +205,7 @@ input:checked + .slider:before {
 .data-item span {
   font-size: 16px;
   font-weight: 400;
-  color: var(--lm-text);
+  color: var(--drc-text);
   margin: 0;
   padding: 0;
 }
@@ -220,17 +220,17 @@ input:checked + .slider:before {
 }
 
 .btn-edit {
-  background: var(--lm-primary);
+  background: var(--drc-primary);
 }
 
 .btn-edit:hover {
-  background: var(--lm-accent);
+  background: var(--drc-accent);
 }
 
 .btn-line {
   background: transparent;
-  color: var(--lm-primary);
-  border: 1px solid var(--lm-primary);
+  color: var(--drc-primary);
+  border: 1px solid var(--drc-primary);
 }
 
 .btn-line:hover {
@@ -270,7 +270,7 @@ input:checked + .slider:before {
 
 .input-perfil {
   padding: 8px;
-  border: 1px solid var(--lm-border);
+  border: 1px solid var(--drc-border);
   background: transparent;
   border-radius: 4px;
   font-size: 14px;

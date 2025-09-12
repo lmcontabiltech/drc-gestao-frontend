@@ -27,7 +27,7 @@ export class SetorTagComponent {
     }
     switch (this.setor) {
       case Setor.CONTABIL:
-        return '#08195D';
+        return '#D40055';
       case Setor.FISCAL:
         return '#1F337F';
       case Setor.PESSOAL:

@@ -42,7 +42,7 @@ export class ThemeService {
   }
 
   getVariableColors(darkMode: boolean = true) {
-    let lmBg: string,
+    let drcBg: string,
       primaryFont: string,
       secondaryFont: string,
       primaryButton: string,
@@ -59,7 +59,7 @@ export class ThemeService {
 
     if (darkMode) {
       // default dark mode
-      lmBg = '#010409';
+      drcBg = '#010409';
       primaryFont = '#FFFFFF';
       secondaryFont = '#FFFFFF';
       primaryButton = '#5ea828';
@@ -75,7 +75,7 @@ export class ThemeService {
       tabelaChild = '#212a36';
     } else {
       // light mode
-      lmBg = '#e4e5eb';
+      drcBg = '#e4e5eb';
       primaryFont = '#37383c';
       secondaryFont = '#1a1918';
       primaryButton = '#5ea828';
@@ -91,7 +91,7 @@ export class ThemeService {
       tabelaChild = '#fafafa';
     }
     return {
-      lmBg: lmBg,
+      drcBg: drcBg,
       primaryFont: primaryFont,
       secondaryFont: secondaryFont,
       primaryButton: primaryButton,
@@ -122,14 +122,14 @@ export class ThemeService {
     const root = document.documentElement;
 
     // cores variaveis
-    root.style.setProperty('--lm-background', theme.variableColors.lmBg);
-    root.style.setProperty('--lm-text', theme.variableColors.primaryFont);
-    root.style.setProperty('--lm-text02', theme.variableColors.secondaryFont);
+    root.style.setProperty('--drc-background', theme.variableColors.drcBg);
+    root.style.setProperty('--drc-text', theme.variableColors.primaryFont);
+    root.style.setProperty('--drc-text02', theme.variableColors.secondaryFont);
     root.style.setProperty(
       '--primary-button',
       theme.variableColors.primaryButton
     );
-    root.style.setProperty('--lm-sidebar-bg', theme.variableColors.sidebar);
+    root.style.setProperty('--drc-sidebar-bg', theme.variableColors.sidebar);
     root.style.setProperty(
       '--form-background',
       theme.variableColors.formBackground
@@ -138,9 +138,9 @@ export class ThemeService {
       '--container-background',
       theme.variableColors.containerBG
     );
-    root.style.setProperty('--lm-border', theme.variableColors.borda);
-    root.style.setProperty('--lm-border02', theme.variableColors.borda02);
-    root.style.setProperty('--lm-border03', theme.variableColors.borda03);
+    root.style.setProperty('--drc-border', theme.variableColors.borda);
+    root.style.setProperty('--drc-border02', theme.variableColors.borda02);
+    root.style.setProperty('--drc-border03', theme.variableColors.borda03);
     root.style.setProperty('--container-modal', theme.variableColors.modalBG);
     root.style.setProperty('--table', theme.variableColors.tabelaBG);
     root.style.setProperty('--table-child', theme.variableColors.tabelaChild);
