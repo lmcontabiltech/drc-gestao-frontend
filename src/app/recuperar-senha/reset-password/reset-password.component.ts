@@ -27,6 +27,10 @@ export class ResetPasswordComponent implements OnInit {
     console.log(this.token);
   }
 
+   goBack() {
+    this.router.navigate(['/login']);
+  }
+
   goToResetPassword() {
     this.errors = [];
 
