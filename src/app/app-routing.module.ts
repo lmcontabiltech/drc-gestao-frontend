@@ -21,17 +21,14 @@ const routes: Routes = [
       {
         path: 'dashboard-admin',
         component: DashboardAdminComponent,
-        canActivate: [AuthGuard],
       },
       {
         path: 'dashboard-coordenador',
         component: DashboardCoordenadorComponent,
-        canActivate: [AuthGuard],
       },
       {
         path: 'dashboard-colaborador',
         component: DashboardColaboradorComponent,
-        canActivate: [AuthGuard],
       },
     ],
   },

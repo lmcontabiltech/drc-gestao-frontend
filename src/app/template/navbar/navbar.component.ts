@@ -241,7 +241,7 @@ export class NavbarComponent implements OnInit, OnDestroy {
     this.modalConfirmacaoService.openModal(
       {
         title: 'Sair da Plataforma',
-        description: `Tem certeza que deseja sair da plataforma <strong>LM Gestor</strong>? Você será redirecionado para a tela de login.`,
+        description: `Tem certeza que deseja sair da plataforma <strong>DRC Gestão</strong>? Você será redirecionado para a tela de login.`,
         confirmTextoBotao: 'Sair',
         size: 'md',
       },
