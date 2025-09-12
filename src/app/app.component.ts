@@ -15,7 +15,7 @@ import { ModalPadraoService } from './services/modal/modal-confirmacao.service';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'lm-app';
+  title = 'drc-app';
 
   @ViewChild('modalOutlet', { read: ViewContainerRef, static: true })
   modalOutlet!: ViewContainerRef;
