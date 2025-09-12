@@ -1,0 +1,234 @@
+.main-container {
+  margin: 120px 32px 24px;
+  max-width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.header-container h2 {
+  font-size: 24px;
+  color: var(--lm-text);
+  margin: 0;
+}
+
+.table-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+  background: var(--container-background);
+  border: var(--lm-border02) 1px solid;
+  border-radius: 8px;
+  min-height: 48px;
+  padding: 24px;
+}
+
+.filtro-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.select-container {
+  width: 250px;
+}
+
+.search-container {
+  width: 400px;
+}
+
+/* notice */
+.notificacao-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  overflow-x: auto;
+}
+
+.notificacao-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  background: #edf0fc;
+  border-radius: 8px;
+  border: solid 1px var(--lm-border02);
+  transition: 0.3s;
+  cursor: pointer;
+  box-shadow: 0 4px 4px rgba(51, 51, 51, 0.063);
+}
+
+.notificacao-item:hover {
+  background: #e5e8f1;
+}
+
+.notificacao-mensagem {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+
+.avatar {
+  width: 30px;
+  height: 30px;
+  background: #b3b3b3;
+  border-radius: 50%;
+}
+
+.notificacao-mensagem span {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--lm-text);
+}
+
+.notificacao-mensagem p {
+  font-size: 16px;
+  color: #6e6e6e;
+  margin: 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 5px;
+  flex-wrap: wrap;
+  line-height: 1.2;
+  word-break: break-word;
+  white-space: normal;
+}
+
+.notificacao-new {
+  width: 12px;
+  min-width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #429941;
+}
+
+.notificacao-item.lida {
+  background-color: #f1f1f1c6;
+  cursor: default;
+}
+
+/* paginação */
+.paginacao {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  gap: 5px;
+}
+
+.paginacao button {
+  border: none;
+  background: transparent;
+  padding: 8px 12px;
+  border-radius: 25%;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 16px;
+  font-weight: 500;
+  color: #585a60;
+}
+
+.paginacao button.ativo {
+  background: #e5e8f1;
+  color: #37383c;
+  font-weight: 600;
+}
+
+.paginacao button:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.paginacao button:not(:disabled):hover {
+  background: rgba(0, 123, 255, 0.2);
+}
+
+.empty-state {
+  text-align: center;
+  padding: 40px;
+  color: #666;
+}
+
+/* status colunas atividades kanban */
+.notificacao-descricao span.status-a-fazer {
+  background-color: #eae2f0;
+  color: #a22bc6;
+  padding: 3px 6px;
+  border-radius: 8px;
+  font-size: 10px;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin: 0 2px;
+  display: inline-block;
+  border: 0.1px solid #a22bc6;
+}
+
+.notificacao-descricao span.status-em-progresso {
+  background-color: #e1ebf2;
+  color: #3498db;
+  padding: 3px 6px;
+  border-radius: 8px;
+  font-size: 10px;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin: 0 2px;
+  display: inline-block;
+  border: 0.1px solid #3498db;
+}
+
+.notificacao-descricao span.status-revisao {
+  background-color: #f1ebe1;
+  color: #f39c12;
+  padding: 3px 6px;
+  border-radius: 8px;
+  font-size: 10px;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin: 0 2px;
+  display: inline-block;
+  border: 0.1px solid #f39c12;
+}
+
+.notificacao-descricao span.status-concluido {
+  background-color: #dfe7e0;
+  color: #1d7206;
+  padding: 3px 6px;
+  border-radius: 8px;
+  font-size: 10px;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin: 0 2px;
+  display: inline-block;
+  border: 0.1px solid #1d7206;
+}
+
+.btn-secondary {
+  all: none;
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--lm-branco);
+  background-color: var(--lm-accent);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.btn-secondary:hover {
+  background-color: var(--lm-primary);
+}

@@ -1,0 +1,243 @@
+<div class="main-container">
+  <div class="header-container">
+    <div class="back-title">
+      <img
+        src="assets/icones/back-left.svg"
+        alt="Back"
+        class="back-icon"
+        (click)="goBack()"
+      />
+      <span>Meu Perfil</span>
+    </div>
+    <div class="toggle-container">
+      <span>{{
+        themeService.isDarkMode() ? "Modo Escuro" : "Modo Claro"
+      }}</span>
+      <label class="switch">
+        <input
+          type="checkbox"
+          [checked]="themeService.isDarkMode()"
+          (change)="toggleDarkMode()"
+        />
+        <span class="slider round"></span>
+      </label>
+    </div>
+  </div>
+
+  <div *ngIf="!showChangePassword" class="container-perfil">
+    <div class="profile-attributes">
+      <div class="container-photo">
+        <div class="image-container" (click)="isEditing && fileInput.click()">
+          <ng-container
+            *ngIf="selectedImageUrl && selectedImageUrl !== ''; else noPhoto"
+          >
+            <img
+              [src]="selectedImageUrl"
+              class="profile-photo"
+              alt="Foto de perfil"
+            />
+          </ng-container>
+          <ng-template #noPhoto>
+            <div
+              class="profile-photo avatar-fallback"
+              [ngStyle]="{ 'background-color': getRandomColor(nome) }"
+            >
+              <span>{{ getInitial(nome) }}</span>
+            </div>
+          </ng-template>
+          <input
+            #fileInput
+            type="file"
+            accept="image/*"
+            (change)="onImageSelected($event)"
+            style="display: none"
+          />
+        </div>
+        <div *ngIf="isEditing" class="edit-profile-photo">
+          <button (click)="fileInput.click()">Alterar foto</button>
+        </div>
+      </div>
+    </div>
+    <div class="data-profile" *ngIf="!isEditing">
+      <div class="data-item">
+        <label class="label-item">Nome:</label>
+        <span>{{ nome || "-" }}</span>
+      </div>
+      <div class="data-item">
+        <label class="label-item">E-mail:</label>
+        <span>{{ email || "-" }}</span>
+      </div>
+      <div class="data-item">
+        <label class="label-item">Setor:</label>
+        <span>{{ getDescricaoSetor(setor) || "-" }}</span>
+      </div>
+    </div>
+    <form
+      class="data-profile-edit"
+      *ngIf="isEditing"
+      (ngSubmit)="saveChanges()"
+      #perfilForm="ngForm"
+    >
+      <div class="editar-dados">
+        <div class="data-edit form-group">
+          <label for="name">Nome:</label>
+          <input
+            [(ngModel)]="nome"
+            type="text"
+            id="name"
+            name="name"
+            class="input-perfil"
+          />
+        </div>
+        <div class="data-edit form-group">
+          <label for="email">E-mail:</label>
+          <input
+            [(ngModel)]="email"
+            id="email"
+            name="email"
+            type="email"
+            class="input-perfil"
+          />
+        </div>
+      </div>
+      <div class="container-btn">
+        <button *ngIf="isEditing" class="btn btn-line" (click)="cancelEdit()">
+          Cancelar
+        </button>
+        <button *ngIf="isEditing" class="btn" (click)="saveChanges()">
+          Salvar
+        </button>
+      </div>
+    </form>
+  </div>
+
+  <div class="container-btn" *ngIf="!isEditing && !showChangePassword">
+    <button *ngIf="!isEditing" class="btn btn-edit" (click)="toggleEdit()">
+      Editar Perfil
+    </button>
+    <button
+      *ngIf="!isEditing"
+      class="btn btn-line"
+      (click)="toggleChangePassword()"
+    >
+      Alterar senha
+    </button>
+  </div>
+
+  <div class="mensg-repostas">
+    <div *ngIf="successMessage" class="alert alert-success">
+      <span>{{ successMessage }}</span>
+      <button class="close-btn" (click)="clearMessage()" aria-label="Fechar">
+        &times;
+      </button>
+      <div
+        class="progress-bar"
+        [style.animation]="
+          successMessage ? 'progressBarAnim 3s linear' : 'none'
+        "
+      ></div>
+    </div>
+    <div *ngIf="errorMessage" class="alert alert-danger">
+      <span>{{ errorMessage }}</span>
+      <button class="close-btn" (click)="clearMessage()" aria-label="Fechar">
+        &times;
+      </button>
+      <div
+        class="progress-bar"
+        [style.animation]="errorMessage ? 'progressBarAnim 3s linear' : 'none'"
+      ></div>
+    </div>
+  </div>
+
+  <!-- Formulário de alteração de senha -->
+  <div *ngIf="showChangePassword">
+    <form (ngSubmit)="changePassword()" #changePasswordForm="ngForm" class="change-password-form">
+      <div class="input-senha">
+        <label for="oldPassword">Senha atual</label>
+        <input
+          type="password"
+          id="oldPassword"
+          name="oldPassword"
+          class="input-perfil"
+          placeholder="Insira sua senha atual"
+          [(ngModel)]="oldPassword"
+          required
+        />
+        <div class="input-icon" type="button" (click)="togglePasswordVisibility('oldPassword')">
+            <img *ngIf="!passwordVisible['oldPassword']" src="assets/icones/eye-open.svg" alt="Mostrar senha" class="toggle-password"/>
+            <img *ngIf="passwordVisible['oldPassword']" src="assets/icones/eye-closed.svg" alt="Mostrar senha" class="toggle-password"/>
+        </div>
+      </div>
+      <div>
+        <div class="input-senha">
+          <label for="newPassword">Nova senha</label>
+          <input
+            type="password"
+            id="newPassword"
+            name="newPassword"
+            class="input-perfil"
+            placeholder="Insira sua nova senha"
+            [(ngModel)]="newPassword"
+            required
+          />
+          <div class="input-icon" type="button" (click)="togglePasswordVisibility('newPassword')">
+              <img *ngIf="!passwordVisible['newPassword']" src="assets/icones/eye-open.svg" alt="Mostrar senha" class="toggle-password"/>
+              <img *ngIf="passwordVisible['newPassword']" src="assets/icones/eye-closed.svg" alt="Mostrar senha" class="toggle-password"/>
+          </div>
+        </div>
+
+        <div class="password-rules-container">
+          <div class="password-rules">
+            <p [class.valid]="senhaMin8">
+              <span [class.valid]="senhaMin8">•</span>
+              Mínimo de 8 caracteres
+            </p>
+            <p [class.valid]="senhaMaiuscula">
+              <span [class.valid]="senhaMaiuscula">•</span>
+              Pelo menos 1 letra maiúscula
+            </p>
+            <p [class.valid]="senhaMinuscula">
+              <span [class.valid]="senhaMinuscula">•</span>
+              Pelo menos 1 letra minúscula
+            </p>
+            <p [class.valid]="senhaNumero">
+              <span [class.valid]="senhaNumero">•</span>
+              Pelo menos 1 número
+            </p>
+            <p [class.valid]="senhaEspecial">
+              <span [class.valid]="senhaEspecial">•</span>
+              Pelo menos 1 caractere especial
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="input-senha">
+        <label for="confirmPassword">Confirmar nova senha</label>
+        <input
+          type="password"
+          id="confirmPassword"
+          name="confirmPassword"
+          class="input-perfil"
+          placeholder="Confirme sua nova senha"
+          [(ngModel)]="confirmPassword"
+          required
+        />
+        <div class="input-icon" type="button" (click)="togglePasswordVisibility('confirmPassword')">
+            <img *ngIf="!passwordVisible['confirmPassword']" src="assets/icones/eye-open.svg" alt="Mostrar senha" class="toggle-password"/>
+            <img *ngIf="passwordVisible['confirmPassword']" src="assets/icones/eye-closed.svg" alt="Mostrar senha" class="toggle-password"/>
+        </div>
+      </div>
+      <div class="container-btn">
+        <button
+          type="button"
+          class="btn btn-line"
+          (click)="toggleChangePassword()"
+        >
+          Cancelar
+        </button>
+        <button type="submit" class="btn btn-edit">Salvar nova senha</button>
+      </div>
+    </form>
+  </div>
+</div>

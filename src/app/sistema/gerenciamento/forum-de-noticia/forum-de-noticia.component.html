@@ -1,0 +1,89 @@
+<div class="main-container">
+    <div class="header-container">
+        <h2>Fórum de notícias</h2>
+        <button class="btn btn-secondary" (click)="centralNoticia()">Central de notícias</button>
+    </div>
+
+    <div class="table-container">
+        <div class="filtro-container">
+            <div class="select-container">
+                <app-select-padrao
+                      label="Notícias"
+                      [options]="lidas"
+                      [(selectedValue)]="selectedLida"
+                      (selectedValueChange)="onNoticiaChange()"
+                      [showDefaultOption]="true"
+                      [defaultLabel]="'Todas as noticias'"
+                      [defaultValue]="''">
+                </app-select-padrao>
+            </div>
+
+            <!-- <div class="search-container">
+                <app-search (searchChange)="onSearch($event)"></app-search>
+            </div> -->
+        </div>
+
+        <div *ngIf="successMessage" class="alert alert-success">
+            <span>{{ successMessage }}</span>
+            <button class="close-btn" (click)="clearMessage()" aria-label="Fechar">&times;</button>
+            <div class="progress-bar-sucess" [style.animation]="successMessage ? 'progressBarAnim 3s linear' : 'none'"></div>
+        </div>
+
+        <div class="progress-bar-container" *ngIf="isLoading">
+            <div class="progress-bar"></div>
+        </div>
+
+        <div class="noticia-container" *ngIf="!isLoading">
+            <div class="noticia-item" *ngFor="let noticia of noticiasPaginados" [class.lida]="noticia.lida">
+                <div class="noticia-tag">
+                    <span class="tag-bolinha" [ngStyle]="{'background': getTipoCor(noticia.tipoNoticia)}"></span>
+                    {{ getTipoDescricao(noticia.tipoNoticia) }}
+                </div>
+
+                <!-- Foto e título -->
+                <div class="notificacao-mensagem">
+                <img *ngIf="noticia.arquivo?.documentoUrl" [src]="noticia.arquivo?.documentoUrl" alt="Foto" class="avatar" />
+                <div class="noticia-info">
+                    <span class="noticia-titulo">{{ noticia.titulo }}</span>
+                    <div class="noticia-meta">
+                        <span class="noticia-data">{{ noticia.publicadaEm }}</span>
+                        <span class="noticia-autor">por {{ noticia.autor.nome }}</span>
+                    </div>
+                    <div class="noticia-visualizacoes">
+                    <span>{{ noticia.qtdVisualizacoes || 0 }} visualizações</span>
+                    </div>
+                    <div class="noticia-resumo">
+                    {{ stripHtmlTags(noticia.conteudo) | slice:0:100 }}<span *ngIf="stripHtmlTags(noticia.conteudo).length > 120">...</span>
+                    </div>
+                </div>
+                </div>
+                <button class="btn-visualizar" (click)="visualizarNoticia(noticia.id); $event.stopPropagation()">Ler notícia</button>
+            </div>
+        </div>
+
+         <div *ngIf="noticiasPaginados.length === 0" class="feedback-container">
+            <ng-container *ngIf="mensagemBusca; else semNoticias">
+                <div>
+                <div class="search alert-warning text-center">
+                    {{ mensagemBusca }}
+                </div>
+                </div>
+            </ng-container>
+            <ng-template #semNoticias>
+                <div class="no-data-message">
+                <img src="assets/imagens/no-data.svg" alt="Sem dados">
+                <p>Não há noticias disponiveis.</p>
+                </div>
+            </ng-template>
+        </div>
+
+        <div class="paginacao">
+            <app-pagination
+            [paginaAtual]="paginaAtual"
+            [totalItens]="totalItens"
+            [itensPorPagina]="itensPorPagina"
+            (paginaMudou)="onPaginaMudou($event)">
+            </app-pagination>
+        </div>  
+    </div>
+</div>
