@@ -30,9 +30,13 @@ export class AuthGuard implements CanActivate {
 
     if (
       role === 'ROLE_ADMIN' ||
-      role === 'ROLE_COORDENADOR' ||
+      role === 'ROLE_GERENTE_DE_TI' ||
+      role === 'ROLE_COORDENADOR_DE_TI' ||
+      role === 'ROLE_RH' ||
+      role === 'ROLE_PROFESSOR' ||
+      role === 'ROLE_DESENVOLVEDOR' ||
       role === 'ROLE_ESTAGIARIO' ||
-      role === 'ROLE_USER'
+      role === 'ROLE_TRAINEE'
     ) {
       return true;
     }
