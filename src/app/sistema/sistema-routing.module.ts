@@ -36,6 +36,7 @@ import { DetalhesNoticiaComponent } from './gerenciamento/visualizar-gerenciamen
 
 const routes: Routes = [
   {  path: 'usuario', 
+    canActivate: [AuthGuard],
     component: LayoutComponent, 
     children: [
       
