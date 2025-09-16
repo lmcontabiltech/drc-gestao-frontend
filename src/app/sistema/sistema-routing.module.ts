@@ -45,9 +45,9 @@ const routes: Routes = [
 
     {path:'dashboard-admin', component: DashboardAdminComponent}, // admin
     {path:'dashboard-colaborador', component: DashboardColaboradorComponent}, //colaborador
-    {path:'dashboard-coordenador', component: DashboardCoordenadorComponent}, //coordenador
+    {path:'dashboard-coordenador', component: DashboardCoordenadorComponent}, //coordenador de TI
 
-      // apenas admin e coordenador
+      // apenas admin e coordenador de TI
       { path: 'colaboradores', component: ColaboradoresComponent},
       { path: 'empresas', component: EmpresasComponent},
       { path: 'perifericos', component:PerifericosComponent},
