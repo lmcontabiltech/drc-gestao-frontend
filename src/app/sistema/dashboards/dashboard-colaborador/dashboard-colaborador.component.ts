@@ -111,8 +111,8 @@ export class DashboardColaboradorComponent implements OnInit {
           case 'ROLE_ADMIN':
             this.permissaoUsuario = 'Administrador';
             break;
-          case 'ROLE_COORDENADOR':
-            this.permissaoUsuario = 'Coordenador';
+          case 'ROLE_GERENTE_DE_TI':
+            this.permissaoUsuario = 'Gerente de TI';
             break;
           case 'ROLE_USER':
             this.permissaoUsuario = 'Colaborador';

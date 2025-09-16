@@ -40,13 +40,13 @@
 .title-header h1 {
   font-size: 24px;
   font-weight: 500;
-  color: var(--lm-text);
+  color: var(--drc-text);
   margin: 0;
 }
 
 .title-header p {
   font-size: 16px;
-  color: var(--lm-text);
+  color: var(--drc-text);
   margin: 0;
   text-align: center;
   padding: 8px 24px;
@@ -61,7 +61,7 @@
 .form-control,
 .input-recuperar {
   padding: 8px;
-  border: 1px solid var(--lm-border);
+  border: 1px solid var(--drc-border);
   background: transparent;
   border-radius: 4px;
   font-size: 14px;
@@ -89,7 +89,7 @@
 }
 
 .btn-recuperar:hover {
-  background: var(--lm-accent);
+  background: #BB004B;
 }
 
 .btn-back {
@@ -99,7 +99,7 @@
 }
 
 .btn-back:hover {
-  color: var(--lm-primary);
-  border: 1.5px solid var(--lm-primary);
+  color: #96003C;
+  border: 1.5px solid #96003C;
   background: #e2e2e292;
 }

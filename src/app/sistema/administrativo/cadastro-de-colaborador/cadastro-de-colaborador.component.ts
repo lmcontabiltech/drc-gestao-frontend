@@ -68,8 +68,8 @@ export class CadastroDeColaboradorComponent implements OnInit {
     switch (permissao) {
       case 'ROLE_ADMIN':
         return 'Administrador';
-      case 'ROLE_COORDENADOR':
-        return 'Coordenador';
+      case 'ROLE_GERENTE_DE_TI':
+        return 'Gerente de TI';
       case 'ROLE_USER':
         return 'Colaborador';
       case 'ROLE_ESTAGIARIO':

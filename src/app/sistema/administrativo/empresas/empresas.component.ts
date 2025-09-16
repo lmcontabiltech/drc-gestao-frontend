@@ -66,7 +66,7 @@ export class EmpresasComponent implements OnInit {
         case 'ROLE_ADMIN':
           this.permissaoUsuario = 'Administrador';
           break;
-        case 'ROLE_COORDENADOR':
+        case 'ROLE_GERENTE_DE_TI':
           this.permissaoUsuario = 'Coordenador';
           break;
         case 'ROLE_USER':

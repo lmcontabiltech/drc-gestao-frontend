@@ -141,8 +141,9 @@ export class AuthService {
 
     let request: Observable<any>;
     if (
-      userPermissao === Permissao.ADMIN &&
-      perm === Permissao.COORDENADOR.valueOf()
+      userPermissao === Permissao.ADMIN 
+      &&
+      perm === Permissao.COORDENADOR_DE_TI.valueOf()
     ) {
       request = this.cadastrarCoordenador(usuario);
     } else {
@@ -171,7 +172,7 @@ export class AuthService {
   }
 
   private cadastrarCoordenador(usuario: Usuario): Observable<any> {
-    return this.http.post(`${this.apiURL}/cadastro/COORDENADOR`, usuario).pipe(
+    return this.http.post(`${this.apiURL}/cadastro/GERENTE_DE_TI`, usuario).pipe(
       catchError((error: HttpErrorResponse) => {
         if (error.status === 422) {
           return throwError('Usuário já cadastrado na base de dados');
@@ -183,7 +184,7 @@ export class AuthService {
 
   public visualizarColaboradores(): Observable<Usuario[] | null> {
     return this.http
-      .get<Usuario[]>(`${this.apiURL}/visualizar/COORDENADOR`, {
+      .get<Usuario[]>(`${this.apiURL}/visualizar/GERENTE_DE_TI`, {
         observe: 'response',
       })
       .pipe(

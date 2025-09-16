@@ -63,7 +63,7 @@ export class ThemeService {
       primaryFont = '#FFFFFF';
       secondaryFont = '#FFFFFF';
       primaryButton = '#5ea828';
-      sidebar = '#0D1117';
+      sidebar = '#0b0b0b';
       formBackground = '#0D1117';
       containerBG = '#0D1117';
       inputs = '#F9F9F9';
@@ -75,11 +75,11 @@ export class ThemeService {
       tabelaChild = '#212a36';
     } else {
       // light mode
-      drcBg = '#e4e5eb';
+      drcBg = '#F7F0F4';
       primaryFont = '#37383c';
       secondaryFont = '#1a1918';
       primaryButton = '#5ea828';
-      sidebar = '#F9F9F9';
+      sidebar = '#0b0b0b';
       formBackground = '#FFFFFF';
       containerBG = '#FFFFFF';
       inputs = '#37383c';
