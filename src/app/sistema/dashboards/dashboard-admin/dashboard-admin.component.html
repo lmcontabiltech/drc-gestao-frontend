@@ -41,7 +41,7 @@
         <div class="cards-setores">
             <div class="card">
                 <div class="title">
-                    <span>Contábil</span>
+                    <span>Front-end</span>
                     <img src="assets/icones/dashboard/calculator.svg" alt="calculadora">
                 </div>
                 <div class="progress">
@@ -56,7 +56,7 @@
             </div>
             <div class="card">
                 <div class="title">
-                    <span>Fiscal</span>
+                    <span>Back-end</span>
                     <img src="assets/icones/dashboard/coin.svg" alt="moeda">
                 </div>
                 <div class="progress">
@@ -71,7 +71,7 @@
             </div>
             <div class="card">
                 <div class="title">
-                    <span>Pessoal</span>
+                    <span>Full Stack</span>
                     <img src="assets/icones/dashboard/duo.svg" alt="dupla de pessoas">
                 </div>
                 <div class="progress">
@@ -84,11 +84,9 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="cards-setores">
             <div class="card">
                 <div class="title">
-                    <span>Paralegal</span>
+                    <span>UI/UX Designer</span>
                     <img src="assets/icones/dashboard/balanca.svg" alt="balança">
                 </div>
                 <div class="progress">
@@ -103,7 +101,99 @@
             </div>
             <div class="card">
                 <div class="title">
-                    <span>Financeiro</span>
+                    <span>DevOps</span>
+                    <img src="assets/icones/dashboard/money.svg" alt="dinheiro">
+                </div>
+                <div class="progress">
+                    <label>Atividades concluídas</label>
+                    <div class="progresso-atividade-container">
+                        <div class="progresso-atividade-bar">
+                            <div class="progresso-atividade-fill" [style.width.%]="progressoAtividades['financeiro'].porcentagem"></div>
+                        </div>
+                        <p class="progresso-atividade-porcentagem">{{ progressoAtividades['financeiro'].porcentagem || 0 }}%</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="title">
+                    <span>QA</span>
+                    <img src="assets/icones/dashboard/money.svg" alt="dinheiro">
+                </div>
+                <div class="progress">
+                    <label>Atividades concluídas</label>
+                    <div class="progresso-atividade-container">
+                        <div class="progresso-atividade-bar">
+                            <div class="progresso-atividade-fill" [style.width.%]="progressoAtividades['financeiro'].porcentagem"></div>
+                        </div>
+                        <p class="progresso-atividade-porcentagem">{{ progressoAtividades['financeiro'].porcentagem || 0 }}%</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="title">
+                    <span>Requisitos</span>
+                    <img src="assets/icones/dashboard/money.svg" alt="dinheiro">
+                </div>
+                <div class="progress">
+                    <label>Atividades concluídas</label>
+                    <div class="progresso-atividade-container">
+                        <div class="progresso-atividade-bar">
+                            <div class="progresso-atividade-fill" [style.width.%]="progressoAtividades['financeiro'].porcentagem"></div>
+                        </div>
+                        <p class="progresso-atividade-porcentagem">{{ progressoAtividades['financeiro'].porcentagem || 0 }}%</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="title">
+                    <span>Processos</span>
+                    <img src="assets/icones/dashboard/money.svg" alt="dinheiro">
+                </div>
+                <div class="progress">
+                    <label>Atividades concluídas</label>
+                    <div class="progresso-atividade-container">
+                        <div class="progresso-atividade-bar">
+                            <div class="progresso-atividade-fill" [style.width.%]="progressoAtividades['financeiro'].porcentagem"></div>
+                        </div>
+                        <p class="progresso-atividade-porcentagem">{{ progressoAtividades['financeiro'].porcentagem || 0 }}%</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="title">
+                    <span>Consultor</span>
+                    <img src="assets/icones/dashboard/money.svg" alt="dinheiro">
+                </div>
+                <div class="progress">
+                    <label>Atividades concluídas</label>
+                    <div class="progresso-atividade-container">
+                        <div class="progresso-atividade-bar">
+                            <div class="progresso-atividade-fill" [style.width.%]="progressoAtividades['financeiro'].porcentagem"></div>
+                        </div>
+                        <p class="progresso-atividade-porcentagem">{{ progressoAtividades['financeiro'].porcentagem || 0 }}%</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cards-setores-finais">
+            <div class="card">
+                <div class="title">
+                    <span>Professor UFC</span>
+                    <img src="assets/icones/dashboard/money.svg" alt="dinheiro">
+                </div>
+                <div class="progress">
+                    <label>Atividades concluídas</label>
+                    <div class="progresso-atividade-container">
+                        <div class="progresso-atividade-bar">
+                            <div class="progresso-atividade-fill" [style.width.%]="progressoAtividades['financeiro'].porcentagem"></div>
+                        </div>
+                        <p class="progresso-atividade-porcentagem">{{ progressoAtividades['financeiro'].porcentagem || 0 }}%</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="title">
+                    <span>Monitor</span>
                     <img src="assets/icones/dashboard/money.svg" alt="dinheiro">
                 </div>
                 <div class="progress">
@@ -144,10 +234,10 @@
     </div>
 
     <div class="graficos-container">
-        <div id="contabil">
+        <div id="Front-End">
              <div class="title-grafico">
                 <h3>
-                    Atividades do Setor Contábil
+                    Atividades do Front-End
                 </h3>
                 <div class="select-container">
                     <app-select-padrao
@@ -166,21 +256,21 @@
                 <app-grafico-barra-horizontal
                 [series]="getGraficoAbertas('CONTABIL').series"
                 [categories]="getGraficoAbertas('CONTABIL').categories"
-                [colors]="['#FEB019']"
+                [colors]="['#FF6B46']"
                 title="Abertas">
                 </app-grafico-barra-horizontal>
                 <app-grafico-barra-horizontal
                 [series]="getGraficoConcluidas('CONTABIL').series"
                 [categories]="getGraficoConcluidas('CONTABIL').categories"
-                [colors]="['#1fde82']"
+                [colors]="['#5EA828']"
                 title="Concluidas">
                 </app-grafico-barra-horizontal>
             </div>
         </div>
-        <div id="fiscal">
+        <div id="Back-End">
             <div class="title-grafico">
                 <h3> 
-                    Atividades do Setor Fiscal
+                    Atividades do Back-End
                 </h3>
                 <div class="select-container">
                     <app-select-padrao
@@ -199,21 +289,21 @@
                 <app-grafico-barra-horizontal
                 [series]="getGraficoAbertas('FISCAL').series"
                 [categories]="getGraficoAbertas('FISCAL').categories"
-                [colors]="['#FEB019']"
+                [colors]="['#FF6B46']"
                 title="Abertas">
                 </app-grafico-barra-horizontal>
                 <app-grafico-barra-horizontal
                 [series]="getGraficoConcluidas('FISCAL').series"
                 [categories]="getGraficoConcluidas('FISCAL').categories"
-                [colors]="['#1fde82']"
+                [colors]="['#5EA828']"
                 title="Concluidas">
                 </app-grafico-barra-horizontal>
             </div>
         </div>
-        <div id="pessoal">
+        <div id="Full Stack">
              <div class="title-grafico">
                 <h3> 
-                    Atividades do Setor Pessoal
+                    Atividades do Full Stack
                 </h3>
                 <div class="select-container">
                     <app-select-padrao
@@ -232,21 +322,21 @@
                 <app-grafico-barra-horizontal
                 [series]="getGraficoAbertas('PESSOAL').series"
                 [categories]="getGraficoAbertas('PESSOAL').categories"
-                [colors]="['#FEB019']"
+                [colors]="['#FF6B46']"
                 title="Abertas">
                 </app-grafico-barra-horizontal>
                 <app-grafico-barra-horizontal
                 [series]="getGraficoConcluidas('PESSOAL').series"
                 [categories]="getGraficoConcluidas('PESSOAL').categories"
-                [colors]="['#1fde82']"
+                [colors]="['#5EA828']"
                 title="Concluidas">
                 </app-grafico-barra-horizontal>
             </div>
         </div>
-        <div id="paralegal">
+        <div id="UI/UX Designer">
              <div class="title-grafico">
                 <h3> 
-                    Atividades do Setor Paralegal
+                    Atividades do UI/UX Designer
                 </h3>
                 <div class="select-container">
                     <app-select-padrao
@@ -265,21 +355,21 @@
                 <app-grafico-barra-horizontal
                 [series]="getGraficoAbertas('PARALEGAL').series"
                 [categories]="getGraficoAbertas('PARALEGAL').categories"
-                [colors]="['#FEB019']"
+                [colors]="['#FF6B46']"
                 title="Abertas">
                 </app-grafico-barra-horizontal>
                 <app-grafico-barra-horizontal
                 [series]="getGraficoConcluidas('PARALEGAL').series"
                 [categories]="getGraficoConcluidas('PARALEGAL').categories"
-                [colors]="['#1fde82']"
+                [colors]="['#5EA828']"
                 title="Concluidas">
                 </app-grafico-barra-horizontal>
             </div>
         </div>
-        <div id="financeiro">
+        <div id="DevOps">
              <div class="title-grafico">
                 <h3> 
-                    Atividades do Setor Financeiro
+                    Atividades do DevOps
                 </h3>
                 <div class="select-container">
                     <app-select-padrao
@@ -298,13 +388,149 @@
                 <app-grafico-barra-horizontal
                 [series]="getGraficoAbertas('FINANCEIRO').series"
                 [categories]="getGraficoAbertas('FINANCEIRO').categories"
-                [colors]="['#FEB019']"
+                [colors]="['#FF6B46']"
                 title="Abertas">
                 </app-grafico-barra-horizontal>
                 <app-grafico-barra-horizontal
                 [series]="getGraficoConcluidas('FINANCEIRO').series"
                 [categories]="getGraficoConcluidas('FINANCEIRO').categories"
-                [colors]="['#1fde82']"
+                [colors]="['#5EA828']"
+                title="Concluidas">
+                </app-grafico-barra-horizontal>
+            </div>
+        </div>
+
+        <div id="QA">
+             <div class="title-grafico">
+                <h3> 
+                    Atividades do QA
+                </h3>
+                <div class="select-container">
+                    <app-select-padrao
+                        label="Período"
+                        [options]="periodos"
+                        [(selectedValue)]="periodoSelecionadoSetor['FINANCEIRO']"
+                        (selectedValueChange)="onPeriodoChangeSetor('FINANCEIRO', $event)"
+                        [showDefaultOption]="true"
+                        [defaultLabel]="'Sem período'"
+                        [defaultValue]="''"
+                        [customStyles]="{ 'background-color': '#f8f9fa' }">
+                    </app-select-padrao>
+                </div>
+            </div>
+            <div class="duo-container">
+                <app-grafico-barra-horizontal
+                [series]="getGraficoAbertas('FINANCEIRO').series"
+                [categories]="getGraficoAbertas('FINANCEIRO').categories"
+                [colors]="['#FF6B46']"
+                title="Abertas">
+                </app-grafico-barra-horizontal>
+                <app-grafico-barra-horizontal
+                [series]="getGraficoConcluidas('FINANCEIRO').series"
+                [categories]="getGraficoConcluidas('FINANCEIRO').categories"
+                [colors]="['#5EA828']"
+                title="Concluidas">
+                </app-grafico-barra-horizontal>
+            </div>
+        </div>
+
+        <div id="Requisitos">
+             <div class="title-grafico">
+                <h3> 
+                    Atividades do Requisitos
+                </h3>
+                <div class="select-container">
+                    <app-select-padrao
+                        label="Período"
+                        [options]="periodos"
+                        [(selectedValue)]="periodoSelecionadoSetor['FINANCEIRO']"
+                        (selectedValueChange)="onPeriodoChangeSetor('FINANCEIRO', $event)"
+                        [showDefaultOption]="true"
+                        [defaultLabel]="'Sem período'"
+                        [defaultValue]="''"
+                        [customStyles]="{ 'background-color': '#f8f9fa' }">
+                    </app-select-padrao>
+                </div>
+            </div>
+            <div class="duo-container">
+                <app-grafico-barra-horizontal
+                [series]="getGraficoAbertas('FINANCEIRO').series"
+                [categories]="getGraficoAbertas('FINANCEIRO').categories"
+                [colors]="['#FF6B46']"
+                title="Abertas">
+                </app-grafico-barra-horizontal>
+                <app-grafico-barra-horizontal
+                [series]="getGraficoConcluidas('FINANCEIRO').series"
+                [categories]="getGraficoConcluidas('FINANCEIRO').categories"
+                [colors]="['#5EA828']"
+                title="Concluidas">
+                </app-grafico-barra-horizontal>
+            </div>
+        </div>
+
+        <div id="Processos">
+             <div class="title-grafico">
+                <h3> 
+                    Atividades do Processos
+                </h3>
+                <div class="select-container">
+                    <app-select-padrao
+                        label="Período"
+                        [options]="periodos"
+                        [(selectedValue)]="periodoSelecionadoSetor['FINANCEIRO']"
+                        (selectedValueChange)="onPeriodoChangeSetor('FINANCEIRO', $event)"
+                        [showDefaultOption]="true"
+                        [defaultLabel]="'Sem período'"
+                        [defaultValue]="''"
+                        [customStyles]="{ 'background-color': '#f8f9fa' }">
+                    </app-select-padrao>
+                </div>
+            </div>
+            <div class="duo-container">
+                <app-grafico-barra-horizontal
+                [series]="getGraficoAbertas('FINANCEIRO').series"
+                [categories]="getGraficoAbertas('FINANCEIRO').categories"
+                [colors]="['#FF6B46']"
+                title="Abertas">
+                </app-grafico-barra-horizontal>
+                <app-grafico-barra-horizontal
+                [series]="getGraficoConcluidas('FINANCEIRO').series"
+                [categories]="getGraficoConcluidas('FINANCEIRO').categories"
+                [colors]="['#5EA828']"
+                title="Concluidas">
+                </app-grafico-barra-horizontal>
+            </div>
+        </div>
+
+        <div id="Consultor">
+             <div class="title-grafico">
+                <h3> 
+                    Atividades do Consultor
+                </h3>
+                <div class="select-container">
+                    <app-select-padrao
+                        label="Período"
+                        [options]="periodos"
+                        [(selectedValue)]="periodoSelecionadoSetor['FINANCEIRO']"
+                        (selectedValueChange)="onPeriodoChangeSetor('FINANCEIRO', $event)"
+                        [showDefaultOption]="true"
+                        [defaultLabel]="'Sem período'"
+                        [defaultValue]="''"
+                        [customStyles]="{ 'background-color': '#f8f9fa' }">
+                    </app-select-padrao>
+                </div>
+            </div>
+            <div class="duo-container">
+                <app-grafico-barra-horizontal
+                [series]="getGraficoAbertas('FINANCEIRO').series"
+                [categories]="getGraficoAbertas('FINANCEIRO').categories"
+                [colors]="['#FF6B46']"
+                title="Abertas">
+                </app-grafico-barra-horizontal>
+                <app-grafico-barra-horizontal
+                [series]="getGraficoConcluidas('FINANCEIRO').series"
+                [categories]="getGraficoConcluidas('FINANCEIRO').categories"
+                [colors]="['#5EA828']"
                 title="Concluidas">
                 </app-grafico-barra-horizontal>
             </div>
