@@ -7,6 +7,8 @@ import { SetorDescricao } from './setor-descricao';
 import { ColaboradoresService } from '../../../services/administrativo/colaboradores.service';
 import { Usuario } from '../../../login/usuario';
 import { AuthService } from 'src/app/services/auth.service';
+import { Permissao } from './permissao';
+import { PermissaoDescricao } from './permissao-descricao';
 
 @Component({
   selector: 'app-cadastro-de-colaborador',
@@ -19,6 +21,11 @@ export class CadastroDeColaboradorComponent implements OnInit {
     description: SetorDescricao[Setor[key as keyof typeof Setor]],
   }));
 
+  permissoes = Object.keys(Permissao).map((key) => ({
+    value: Permissao[key as keyof typeof Permissao],
+    description: PermissaoDescricao[Permissao[key as keyof typeof Permissao]],
+  }))
+
   cadastroForm: FormGroup;
   isLoading = false;
   successMessage: string | null = null;
@@ -28,6 +35,7 @@ export class CadastroDeColaboradorComponent implements OnInit {
   permissaoUsuario: string = '';
 
   selectedSetor: string = '';
+  selectedPermissao: string = '';
   permissao: string = 'USER';
   status: string = 'ATIVO';
   passwordVisible: { [key: string]: boolean } = {
@@ -89,6 +97,7 @@ export class CadastroDeColaboradorComponent implements OnInit {
     this.successMessage = null;
     this.errorMessage = null;
     this.cadastroForm.get('setor')?.setValue(this.selectedSetor);
+    this.cadastroForm.get('permissao')?.setValue(this.selectedPermissao)
 
     const usuario: Usuario = {
       ...this.cadastroForm.value,
@@ -154,6 +163,7 @@ export class CadastroDeColaboradorComponent implements OnInit {
 
   private carregarModoEdicao(): void {
     this.cadastroForm.get('setor')?.setValue(this.selectedSetor);
+    this.cadastroForm.get('permissao')?.setValue(this.selectedPermissao)
     this.colaboradorId = this.route.snapshot.paramMap.get('id');
     if (this.colaboradorId) {
       this.isEditMode = true;
@@ -162,6 +172,7 @@ export class CadastroDeColaboradorComponent implements OnInit {
           console.log('Dados do colaborador recebidos:', usuario);
           this.cadastroForm.patchValue(usuario);
           this.selectedSetor = usuario.setor || '';
+          this.selectedSetor = usuario.permissao || '';
         },
         (error) => {
           console.error('Erro ao carregar os dados do colaborador:', error);

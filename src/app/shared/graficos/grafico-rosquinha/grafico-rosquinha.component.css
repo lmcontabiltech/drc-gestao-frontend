@@ -14,7 +14,7 @@
   padding: 16px;
   background: var(--container-background, #ffffff);
   border-radius: 8px;
-  border: var(--lm-border03, #e0e0e0) 1px solid;
+  border: var(--drc-border03, #e0e0e0) 1px solid;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
 }

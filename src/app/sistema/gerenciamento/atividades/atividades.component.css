@@ -16,7 +16,7 @@
 
 .header-container h2 {
   font-size: 24px;
-  color: var(--lm-text);
+  color: var(--drc-text);
   margin: 0;
 }
 
@@ -65,7 +65,7 @@
 
 .kanban-column h3 {
   font-size: 16px;
-  color: var(--lm-text);
+  color: var(--drc-text);
   font-weight: 500;
   margin-bottom: 16px;
 }

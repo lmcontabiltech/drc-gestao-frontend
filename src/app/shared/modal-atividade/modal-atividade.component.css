@@ -53,7 +53,7 @@
   transform: translateY(0) scale(1);
   overflow: hidden;
   border-radius: 1rem;
-  background: var(--lm-white);
+  background: var(--drc-white);
   text-align: left;
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
   transition: all 0.3s;
@@ -108,7 +108,7 @@
 
 .modal-header h2 {
   font-size: 24px;
-  color: var(--lm-primary);
+  color: var(--drc-primary);
   margin: 0;
   font-weight: 500;
   flex: 1;
@@ -152,14 +152,14 @@
 
 .item-modal label {
   font-size: 16px;
-  color: var(--lm-text);
+  color: var(--drc-text);
   margin: 0;
 }
 
 .item-modal p {
   font-size: 14px;
   font-weight: 500;
-  color: var(--lm-text);
+  color: var(--drc-text);
   margin: 0;
   text-align: start;
 }

@@ -50,8 +50,8 @@
 .add-button {
   margin-top: 16px;
   padding: 8px 16px;
-  background: var(--lm-accent);
-  color: var(--lm-branco);
+  background: var(--drc-accent);
+  color: var(--drc-branco);
   border: none;
   border-radius: 6px;
   cursor: pointer;
@@ -60,5 +60,5 @@
 }
 
 .add-button:hover {
-  background: var(--lm-primary);
+  background: var(--drc-primary);
 }

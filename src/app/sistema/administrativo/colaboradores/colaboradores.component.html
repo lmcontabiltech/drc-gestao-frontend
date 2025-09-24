@@ -13,7 +13,7 @@
         <div class="filtro-container">
             <div class="select-container">
                 <app-select-padrao
-                  label="Setor"
+                  label="Todos os Setores"
                   [options]="setores"
                   [(selectedValue)]="selectedSetor"
                   (selectedValueChange)="onSetorChange()"
@@ -27,10 +27,6 @@
                 <div class="search-container">
                     <app-search (searchChange)="onSearch($event)"></app-search>
                 </div>
-
-                <button class="btn btn-outline" (click)="exportCsv()" [disabled]="isExporting">
-                    {{ isExporting ? 'Carregando...' : 'Exportar' }}
-                </button>
             </div>
         </div>
 

@@ -16,7 +16,7 @@
 
 .header-container h2 {
   font-size: 24px;
-  color: var(--lm-text);
+  color: var(--drc-text);
   margin: 0;
 }
 
@@ -26,7 +26,7 @@
   align-items: center;
   flex-direction: column;
   width: 100%;
-  background: var(--lm-branco);
+  background: var(--drc-branco);
   border: #ccd0de 1px solid;
   border-radius: 8px;
   min-height: 650px;
@@ -61,7 +61,7 @@
 }
 
 .chat-item {
-  color: var(--lm-primary);
+  color: var(--drc-primary);
   padding: 12px;
   cursor: pointer;
   border-radius: 8px;
@@ -151,7 +151,7 @@
   height: 64px;
   border: none;
   border-radius: 0 16px 16px 0;
-  color: var(--lm-branco);
+  color: var(--drc-branco);
   background: #273e74;
   cursor: pointer;
   font-size: 14px;
@@ -180,7 +180,7 @@
   margin: 0;
   font-size: 18px;
   font-weight: 500;
-  color: var(--lm-primary);
+  color: var(--drc-primary);
 }
 
 .chat-messages {
@@ -233,7 +233,7 @@
 }
 
 .message.other .message-username {
-  color: var(--lm-primary);
+  color: var(--drc-primary);
 }
 
 .message.user .message-username {
