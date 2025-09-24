@@ -60,8 +60,8 @@
     </div>
     <div class="data-profile" *ngIf="!isEditing">
       <div class="data-item">
-        <label class="label-item">Nome:</label>
-        <span>{{ nome || "-" }}</span>
+        <label class="label-item">E-mail pessoal:</label>
+        <span>{{ email || "-" }}</span>
       </div>
       <div class="data-item">
         <label class="label-item">E-mail:</label>
@@ -113,7 +113,7 @@
 
   <div class="container-btn" *ngIf="!isEditing && !showChangePassword">
     <button *ngIf="!isEditing" class="btn btn-edit" (click)="toggleEdit()">
-      Editar Perfil
+      Editar dados
     </button>
     <button
       *ngIf="!isEditing"

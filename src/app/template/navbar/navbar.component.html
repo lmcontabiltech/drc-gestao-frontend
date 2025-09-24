@@ -125,6 +125,15 @@
               <img src="assets/icones/box.svg" alt="home icon" />
               <span>Inventário</span>
             </a>
+
+              <a 
+              *ngIf="permissaoUsuario === 'Administrador' || permissaoUsuario === 'Coordenador'" 
+              routerLink=""
+              class="sidebar-link" 
+              [ngClass]="">
+              <img src="assets/icones/Lab.svg" alt="home icon" />
+              <span>Laboratório</span>
+            </a>
           </div>
         </div>
 
@@ -140,6 +149,16 @@
               <a routerLink="/usuario/historico-atividades" class="sidebar-link" [ngClass]="{'active-link': isActive('/usuario/historico-atividades')}">
                 <img src="assets/icones/historico-icon.svg" alt="home icon" />
                 <span>Histórico de Atividades</span>
+              </a>
+
+              <a routerLink="" class="sidebar-link" [ngClass]="">
+                <img src="assets/icones/agenda-icon.svg" alt="home icon" />
+                <span>Agenda</span>
+              </a>
+
+              <a routerLink="" class="sidebar-link" [ngClass]="">
+                <img src="assets/icones/relatorio-icon.svg" alt="home icon" />
+                <span>Relatório</span>
               </a>
 
               <a routerLink="/usuario/chat" class="sidebar-link" [ngClass]="{'active-link': isActive('/usuario/chat')}">

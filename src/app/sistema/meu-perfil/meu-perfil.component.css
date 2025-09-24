@@ -88,7 +88,7 @@
 }
 
 input:checked + .slider {
-  background-color: #5ea828;
+  background-color: var(--drc-accent);
 }
 
 input:checked + .slider:before {
@@ -189,8 +189,7 @@ input:checked + .slider:before {
 }
 
 .data-item {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
   justify-items: start;
 }
 
@@ -207,6 +206,7 @@ input:checked + .slider:before {
   font-weight: 400;
   color: var(--drc-text);
   margin: 0;
+  margin-left: 6px;
   padding: 0;
 }
 
@@ -220,11 +220,11 @@ input:checked + .slider:before {
 }
 
 .btn-edit {
-  background: var(--drc-primary);
+  background: #1884FF;
 }
 
 .btn-edit:hover {
-  background: var(--drc-accent);
+  background: var(--primary-btnHover);
 }
 
 .btn-line {

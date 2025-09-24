@@ -15,7 +15,7 @@
 
 .title-container h2 {
   font-size: 24px;
-  color: var(--lm-text);
+  color: var(--drc-text);
 }
 
 .cards-container {
@@ -33,6 +33,28 @@
   gap: 24px;
 }
 
+.cards-setores{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr)
+}
+
+.cards-setores-finais{
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 24px;
+}
+
+.cards-setores-finais span{
+  color: #E5005C;
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.cards-setores-finais label {
+  color: var(--drc-text);
+  font-size: 12px;
+}
+
 .card {
   display: flex;
   flex-direction: column;
@@ -42,13 +64,13 @@
   padding: 24px;
   background: var(--container-background);
   border-radius: 8px;
-  border: var(--lm-border03) 1px solid;
+  border: var(--drc-border03) 1px solid;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.101);
   gap: 8px;
 }
 
 .moeda-card {
-  background: #283c8a;
+  background: #252525;
 }
 
 .moeda-card span {
@@ -76,24 +98,24 @@
 }
 
 .cards-setores span {
-  color: #08195d;
+  color: #E5005C;
   font-size: 28px;
   font-weight: 500;
 }
 
 .cards-setores label {
-  color: var(--lm-text);
+  color: var(--drc-text);
   font-size: 12px;
 }
 
 .cards-infos span {
-  color: #08195d;
+  color: #E5005C;
   font-size: 28px;
   font-weight: 500;
 }
 
 .cards-infos p {
-  color: var(--lm-text);
+  color: var(--drc-text);
   font-size: 14px;
   margin: 0;
 }
@@ -126,7 +148,7 @@
 
 .progresso-atividade-fill {
   height: 100%;
-  background: #5ea828;
+  background: #3D7CDB;
   transition: width 0.3s;
 }
 
@@ -163,7 +185,7 @@
 
 .title-grafico h3 {
   font-size: 18px;
-  color: var(--lm-text);
+  color: var(--drc-text);
   font-weight: 500;
 }
 
