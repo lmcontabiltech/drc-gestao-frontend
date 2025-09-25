@@ -1,6 +1,6 @@
 import { Empresa } from '../../administrativo/empresas/empresa';
 import { Prioridade } from './enums/prioridade';
-import { Setor } from '../../administrativo/cadastro-de-colaborador/setor';
+import { Setor } from '../../administrativo/cadastro-de-colaborador/enums/setor';
 import { Lista } from './listas';
 import { Processo } from '../processos/processo';
 import { multaAplicada } from './multaAplicada';

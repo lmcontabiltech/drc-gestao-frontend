@@ -3,8 +3,8 @@ import { Router } from '@angular/router';
 import { Periferico } from './periferico';
 import { PerifericoService } from 'src/app/services/administrativo/periferico.service';
 import { AuthService } from 'src/app/services/auth.service';
-import { Setor } from '../cadastro-de-colaborador/setor';
-import { SetorDescricao } from '../cadastro-de-colaborador/setor-descricao';
+import { Setor } from '../cadastro-de-colaborador/enums/setor';
+import { SetorDescricao } from '../cadastro-de-colaborador/enums/setor-descricao';
 import { ModalDeleteService } from 'src/app/services/modal/modal-deletar.service';
 
 @Component({

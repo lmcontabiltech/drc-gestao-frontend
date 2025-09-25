@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Atividade } from 'src/app/sistema/gerenciamento/atividades/atividades';
 import { Prioridade } from 'src/app/sistema/gerenciamento/atividades/enums/prioridade';
-import { Setor } from 'src/app/sistema/administrativo/cadastro-de-colaborador/setor';
+import { Setor } from 'src/app/sistema/administrativo/cadastro-de-colaborador/enums/setor';
 
 @Component({
   selector: 'app-card-atv',

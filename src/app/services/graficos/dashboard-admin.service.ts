@@ -8,7 +8,7 @@ import { GraficoFuncionariosPorSetor } from 'src/app/sistema/dashboards/dashboar
 import { GraficoAtividadesPorMes } from 'src/app/sistema/dashboards/dashboard-admin/models/atividades-por-mes';
 import { GraficoEmpresasPorRegime } from 'src/app/sistema/dashboards/dashboard-admin/models/empresa-por-regime';
 import { DashboardAtividadesPorSetorResponseDTO } from 'src/app/sistema/dashboards/dashboard-admin/models/atividades-por-setor';
-import { Setor } from 'src/app/sistema/administrativo/cadastro-de-colaborador/setor';
+import { Setor } from 'src/app/sistema/administrativo/cadastro-de-colaborador/enums/setor';
 
 export interface GraficoSetor {
   concluidas: number;

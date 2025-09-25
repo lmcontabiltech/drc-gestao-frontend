@@ -4,32 +4,35 @@
         <img src="assets/icones/back-left.svg" alt="Back" class="back-icon" (click)="goBack()">
         <span>{{ isEditMode ? 'Editar colaborador' : 'Cadastrar colaborador' }}</span>
     </div>
-
-   <div class="header">
-    <h2>Dados gerais</h2>
-    <hr color="#DCDCDC">
-   </div>
   
     <div class="forms-container">
         <form (ngSubmit)="onSubmit()" [formGroup]="cadastroForm">
+            <div class="header">
+                <h2>Dados gerais</h2>
+                <hr color="#DCDCDC">
+            </div>
+
             <div class="form-group">
                 <label for="nome">Nome</label>
                 <input type="text" id="nome" name="nome" formControlName="nome" class="form-control" placeholder="Digite o nome completo" required>
             </div>
+
             <div class="input-duo">
                 <div class="form-group">
-                    <label for="cpf">Cpf</label>
+                    <label for="cpf">CPF</label>
                     <input type="text" id="cpf" name="cpf" formControlName="cpf" class="form-control" placeholder="xxx.xxx.xxx-xx" required>
                 </div>
                 <div class="form-group">
-                    <label for="data de nascimento">Data de nascimento</label>
-                    <input type="date" id="data de nascimento" name="data de nascimento" formControlName="data de nascimento" class="form-control" placeholder="Digite" required>
+                    <label for="dataNascimento">Data de nascimento</label>
+                    <input type="date" id="dataNascimento" name="dataNascimento" formControlName="dataNascimento" class="form-control" placeholder="Digite" required>
                 </div>
             </div>
+
             <div class="form-group">
                 <label for="e-mail coorporativo">E-mail coorporativo</label>
                 <input type="email" id="e-mail coorporativo" name="e-mail coorporativo" formControlName="e-mail coorporativo" class="form-control" placeholder="Digite o e-mail coorporativo" required>
             </div>
+
             <div class="input-duo">
                 <div class="form-group">
                     <label for="telefone">Telefone</label>
@@ -39,9 +42,7 @@
                     <label for="instagram">Instagram</label>
                     <input type="text" id="instagram" name="instagram" formControlName="instagram" class="form-control" placeholder="Digite o seu username" required>
                 </div>
-
             </div>
-
 
             <div class="form-group">
                 <label for="setor">Permissão</label>
@@ -86,42 +87,41 @@
                 </div>
             </div>
 
-    <div class="header">
-        <h2>Documentos</h2>
-        <hr color="#DCDCDC">
-    </div>
-
-    <div class="header">
-        <h2>Credenciais de acesso</h2>
-        <hr color="#DCDCDC">
-    </div>
-
-        <div class="form-group">
-            <label for="E-mail pessoal">E-mail pessoal</label>
-            <input type="email" id="E-mail pessoal" name="E-mail pessoal" formControlName="E-mail pessoal" class="form-control" placeholder="Digite o e-mail pessoal" required>
-        </div>
-        <div class="input-duo">
-            <div class="form-group">
-                <label for="senha">Senha</label>
-                <div class="password-container">
-                    <input type="password" id="senha" name="password" formControlName="password" class="form-control" placeholder="Digite uma senha" required>
-                    <span class="toggle-password" (click)="togglePasswordVisibility('password')">
-                        <img [src]="passwordVisible['password'] ?  'assets/icones/eye-open.svg' : 'assets/icones/eye-closed.svg'" >
-                    </span>
-                </div>
-
+            <div class="header">
+                <h2>Documentos</h2>
+                <hr color="#DCDCDC">
             </div>
-            <div class="form-group">
-                <label for="confirmar-senha">Confirmar senha</label>
-                <div class="password-container">
-                    <input type="password" id="confirmar-senha" name="confirmPassword" formControlName="confirmPassword" class="form-control" placeholder="Confirme sua senha" required>
-                    <span class="toggle-password" (click)="togglePasswordVisibility('confirmPassword')">
-                        <img [src]="passwordVisible['confirmPassword'] ?  'assets/icones/eye-open.svg' : 'assets/icones/eye-closed.svg'">
-                    </span>
-                </div>
 
+            <div class="header">
+                <h2>Credenciais de acesso</h2>
+                <hr color="#DCDCDC">
             </div>
-        </div>
+
+            <div class="form-group">
+                <label for="E-mail pessoal">E-mail pessoal</label>
+                <input type="email" id="E-mail pessoal" name="E-mail pessoal" formControlName="E-mail pessoal" class="form-control" placeholder="Digite o e-mail pessoal" required>
+            </div>
+
+            <div class="input-duo">
+                <div class="form-group">
+                    <label for="senha">Senha</label>
+                    <div class="password-container">
+                        <input type="password" id="senha" name="password" formControlName="password" class="form-control" placeholder="Digite uma senha" required>
+                        <span class="toggle-password" (click)="togglePasswordVisibility('password')">
+                            <img [src]="passwordVisible['password'] ?  'assets/icones/eye-open.svg' : 'assets/icones/eye-closed.svg'" >
+                        </span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="confirmar-senha">Confirmar senha</label>
+                    <div class="password-container">
+                        <input type="password" id="confirmar-senha" name="confirmPassword" formControlName="confirmPassword" class="form-control" placeholder="Confirme sua senha" required>
+                        <span class="toggle-password" (click)="togglePasswordVisibility('confirmPassword')">
+                            <img [src]="passwordVisible['confirmPassword'] ?  'assets/icones/eye-open.svg' : 'assets/icones/eye-closed.svg'">
+                        </span>
+                    </div>
+                </div>
+            </div>
 
 
             <div class="container-btn">

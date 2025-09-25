@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { Setor } from 'src/app/sistema/administrativo/cadastro-de-colaborador/setor';
-import { SetorDescricao } from 'src/app/sistema/administrativo/cadastro-de-colaborador/setor-descricao';
+import { Setor } from 'src/app/sistema/administrativo/cadastro-de-colaborador/enums/setor';
+import { SetorDescricao } from 'src/app/sistema/administrativo/cadastro-de-colaborador/enums/setor-descricao';
 import { EmpresasService } from 'src/app/services/administrativo/empresas.service';
 import { AutoCompleteOption } from 'src/app/shared/select-auto-complete/select-auto-complete.component';
 

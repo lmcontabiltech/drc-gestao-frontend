@@ -8,8 +8,8 @@ import {
   AbstractControl,
 } from '@angular/forms';
 import { Noticia } from '../forum-de-noticia/noticia';
-import { Setor } from '../../administrativo/cadastro-de-colaborador/setor';
-import { SetorDescricao } from '../../administrativo/cadastro-de-colaborador/setor-descricao';
+import { Setor } from '../../administrativo/cadastro-de-colaborador/enums/setor';
+import { SetorDescricao } from '../../administrativo/cadastro-de-colaborador/enums/setor-descricao';
 import { NoticiaService } from 'src/app/services/gerenciamento/noticia.service';
 import { ColaboradoresService } from 'src/app/services/administrativo/colaboradores.service';
 import { TipoNoticia } from '../forum-de-noticia/enums/tipo-noticia';

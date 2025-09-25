@@ -3,7 +3,7 @@ import { Location } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 import { EmpresasService } from 'src/app/services/administrativo/empresas.service';
 import { Empresa } from '../../empresas/empresa';
-import { Setor } from '../../cadastro-de-colaborador/setor';
+import { Setor } from '../../cadastro-de-colaborador/enums/setor';
 import { RegimeDaEmpresaDescricao } from '../../empresas/enums/regime-da-empresa-descricao';
 import { ControleDeParcelamentoDescricao } from '../../empresas/enums/controle-de-parcelamento-descricao';
 import { TipoEmpresaDescricao } from '../../empresas/enums/tipo-empresa-descricao';

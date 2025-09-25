@@ -3,8 +3,8 @@ import { Location } from '@angular/common';
 import { ActivatedRoute, Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Tarefa } from '../processos/tarefas';
-import { Setor } from '../../administrativo/cadastro-de-colaborador/setor';
-import { SetorDescricao } from '../../administrativo/cadastro-de-colaborador/setor-descricao';
+import { Setor } from '../../administrativo/cadastro-de-colaborador/enums/setor';
+import { SetorDescricao } from '../../administrativo/cadastro-de-colaborador/enums/setor-descricao';
 import { Escolha } from '../processos/enums/escolha';
 import { EscolhaDescricao } from '../processos/enums/escolha-descricao';
 import { Processo } from '../processos/processo';
@@ -106,8 +106,8 @@ export class CadastroDeProcessosComponent implements OnInit {
           this.errorMessage = null;
           this.processoForm.reset();
           this.router.navigate(['/usuario/processos'], {
-              state: { successMessage: 'Processo cadastrado com sucesso!' },
-            });
+            state: { successMessage: 'Processo cadastrado com sucesso!' },
+          });
         },
         (error) => {
           this.isLoading = false;
