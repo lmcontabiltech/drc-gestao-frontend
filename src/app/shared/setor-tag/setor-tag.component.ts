@@ -26,27 +26,27 @@ export class SetorTagComponent {
       return '#47484e';
     }
     switch (this.setor) {
-      case Setor.CONTABIL:
-        return '#D40055';
-      case Setor.FISCAL:
+      case Setor.FRONTEND:
+        return '#DBBAE6';
+      case Setor.PROFESSOR_UFC:
         return '#1F337F';
-      case Setor.PESSOAL:
+      case Setor.MONITOR:
         return '#4a59a0';
-      case Setor.PARALEGAL:
-        return '#585A60';
-      case Setor.FINANCEIRO:
-        return '#5a5f7b';
-      case Setor.JURIDICO:
+      case Setor.BACKEND:
+        return '#BABBE6';
+      case Setor.FULLSTACK:
+        return '#F9E8C9';
+      case Setor.DEVOPS:
         return '#2C3E50';
-      case Setor.ADMINISTRATIVO:
+      case Setor.QA:
         return '#34495E';
-      case Setor.RH:
+      case Setor.PROCESSOS:
         return '#6A3BCE';
-      case Setor.SUPORTE_TI:
+      case Setor.REQUISITOS:
         return '#0984E3';
-      case Setor.ESTAGIARIO:
-        return '#3A3AB3';
-      case Setor.OUTRO:
+      case Setor.UI_UX_DESIGN:
+        return '#F9C9E6';
+      case Setor.CONSULTOR:
         return '#217f94ff';
       default:
         return '#CCD0DE';

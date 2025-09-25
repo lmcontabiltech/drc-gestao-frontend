@@ -2,7 +2,7 @@
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background: #1e3591;
+  background: #252525;
   color: #ffffff;
   border: none;
   border-radius: 50%;
@@ -19,7 +19,7 @@
 }
 
 .chat-toggle:hover {
-  background: #1a2b7c;
+  background: #1a1918;
   transform: scale(1.08);
   box-shadow: 0 8px 16px rgba(30, 53, 145, 0.25);
 }
@@ -43,7 +43,7 @@
 }
 
 .chat-header {
-  background: #1e3591;
+  background: #252525;
   color: #ffffff;
   padding: 10px 16px;
   border-top-left-radius: 12px;

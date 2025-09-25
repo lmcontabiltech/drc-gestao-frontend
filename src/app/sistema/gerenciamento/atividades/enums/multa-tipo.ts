@@ -9,111 +9,111 @@ export interface MultaTipo {
 export const MULTAS_TIPO: MultaTipo[] = [
   // CONTÁBIL
   {
-    key: 'OMISSAO_ESCRITURACAO_CONTABIL',
-    setor: Setor.CONTABIL,
+    key: 'OMISSAO_ESCRITURACAO_FRONTEND',
+    setor: Setor.FRONTEND,
     descricao: 'Omissão de escrituração contábil',
   },
   {
     key: 'FALTA_APRESENTACAO_LIVROS',
-    setor: Setor.CONTABIL,
+    setor: Setor.FRONTEND,
     descricao: 'Falta de apresentação de livros',
   },
   {
     key: 'ENTREGA_EM_ATRASO_ECD',
-    setor: Setor.CONTABIL,
+    setor: Setor.FRONTEND,
     descricao: 'Entrega em atraso da ECD',
   },
   {
     key: 'INCONSISTENCIA_BALANCO_PATRIMONIAL',
-    setor: Setor.CONTABIL,
+    setor: Setor.FRONTEND,
     descricao: 'Inconsistência no balanço patrimonial',
   },
 
   // PESSOAL
   {
     key: 'ATRASO_PAGAMENTO_SALARIO',
-    setor: Setor.PESSOAL,
+    setor: Setor.BACKEND,
     descricao: 'Atraso no pagamento do salário',
   },
   {
     key: 'ATRASO_RECOLHIMENTO_FGTS',
-    setor: Setor.PESSOAL,
+    setor: Setor.BACKEND,
     descricao: 'Atraso no recolhimento do FGTS',
   },
   {
     key: 'EMPREGADO_NAO_REGISTRADO',
-    setor: Setor.PESSOAL,
+    setor: Setor.BACKEND,
     descricao: 'Empregado não registrado',
   },
   {
     key: 'ATRASO_ENVIO_ESOCIAL',
-    setor: Setor.PESSOAL,
+    setor: Setor.BACKEND,
     descricao: 'Atraso no envio do eSocial',
   },
   {
     key: 'ATRASO_ENVIO_CAGED',
-    setor: Setor.PESSOAL,
+    setor: Setor.BACKEND,
     descricao: 'Atraso no envio do CAGED',
   },
 
   // PARALEGAL
   {
     key: 'ATOS_SOCIETARIOS_NAO_ARQUIVADOS',
-    setor: Setor.PARALEGAL,
+    setor: Setor.FULLSTACK,
     descricao: 'Atos societários não arquivados',
   },
   {
     key: 'LICENCAS_ALVARAS_VENCIDOS',
-    setor: Setor.PARALEGAL,
+    setor: Setor.FULLSTACK,
     descricao: 'Licenças/Alvarás vencidos',
   },
   {
     key: 'EMPRESA_INATIVA_NAO_COMUNICADA',
-    setor: Setor.PARALEGAL,
+    setor: Setor.FULLSTACK,
     descricao: 'Empresa inativa não comunicada',
   },
 
   // FINANCEIRO
   {
     key: 'ATRASO_OBRIGACOES_FINANCEIRAS',
-    setor: Setor.FINANCEIRO,
+    setor: Setor.UI_UX_DESIGN,
     descricao: 'Atraso no cumprimento de obrigações financeiras',
   },
   {
     key: 'FALHA_RETENCAO_TRIBUTOS',
-    setor: Setor.FINANCEIRO,
+    setor: Setor.UI_UX_DESIGN,
     descricao: 'Falha na retenção de tributos',
   },
   {
     key: 'AUSENCIA_CONTROLE_FLUXO_CAIXA',
-    setor: Setor.FINANCEIRO,
+    setor: Setor.UI_UX_DESIGN,
     descricao: 'Ausência de controle de fluxo de caixa',
   },
 
   // FISCAL
   {
     key: 'ENTREGA_EM_ATRASO_DCTF',
-    setor: Setor.FISCAL,
+    setor: Setor.DEVOPS,
     descricao: 'Entrega em atraso da DCTF',
   },
   {
     key: 'ENTREGA_EM_ATRASO_EFD_CONTRIBUICOES',
-    setor: Setor.FISCAL,
+    setor: Setor.DEVOPS,
     descricao: 'Entrega em atraso da EFD Contribuições',
   },
   {
     key: 'OMISSAO_OU_ERRO_NOTA_FISCAL',
-    setor: Setor.FISCAL,
+    setor: Setor.DEVOPS,
     descricao: 'Omissão ou erro em nota fiscal',
   },
   {
     key: 'FALTA_RECOLHIMENTO_TRIBUTOS',
-    setor: Setor.FISCAL,
+    setor: Setor.DEVOPS,
     descricao: 'Falta de recolhimento de tributos',
   },
   {
     key: 'ATRASO_PAGAMENTO_SIMPLES_NACIONAL',
-    setor: Setor.FISCAL,
+    setor: Setor.DEVOPS,
     descricao: 'Atraso no pagamento do Simples Nacional',
   },
 ];

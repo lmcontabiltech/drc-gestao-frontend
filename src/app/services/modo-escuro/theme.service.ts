@@ -78,7 +78,7 @@ export class ThemeService {
       drcBg = '#F7F0F4';
       primaryFont = '#37383c';
       secondaryFont = '#1a1918';
-      primaryButton = '#5ea828';
+      primaryButton = '#1884FF';
       sidebar = '#0b0b0b';
       formBackground = '#FFFFFF';
       containerBG = '#FFFFFF';

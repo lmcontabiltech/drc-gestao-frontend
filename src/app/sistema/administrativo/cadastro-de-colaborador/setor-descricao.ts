@@ -1,15 +1,15 @@
 import { Setor } from "./setor";
 
 export const SetorDescricao: Record<Setor, string> = {
-    [Setor.CONTABIL]: 'Contábil',
-    [Setor.FISCAL]: 'Fiscal',
-    [Setor.PESSOAL]: 'Pessoal',
-    [Setor.PARALEGAL]: 'Paralegal',
-    [Setor.FINANCEIRO]: 'Financeiro',
-    [Setor.JURIDICO]: 'Jurídico',
-    [Setor.ADMINISTRATIVO]: 'Administrativo',
-    [Setor.RH]: 'Recursos Humanos',
-    [Setor.SUPORTE_TI]: 'Suporte de TI',
-    [Setor.ESTAGIARIO]: 'Estagiário',
-    [Setor.OUTRO]: 'Outro'
+    [Setor.FRONTEND]: "Frontend",
+    [Setor.PROFESSOR_UFC]: "Professor UFC",
+    [Setor.MONITOR]: "Monitor",
+    [Setor.BACKEND]: "Backend",
+    [Setor.FULLSTACK]: "Fullstack",
+    [Setor.DEVOPS]: "DevOps",
+    [Setor.QA]: "QA",
+    [Setor.PROCESSOS]: "Processos",
+    [Setor.REQUISITOS]: "Requisitos",
+    [Setor.UI_UX_DESIGN]: "UI/UX Design",
+    [Setor.CONSULTOR]: "Consultor"
 };

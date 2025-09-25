@@ -5,7 +5,7 @@
   width: 100%;
   min-width: 200px;
   min-height: 40px;
-  border: 1px solid var(--lm-border02);
+  border: 1px solid var(--drc-border02);
   border-radius: 8px;
 }
 
@@ -16,7 +16,7 @@ label {
   transform: translateY(-50%);
   transition: all 0.3s ease;
   pointer-events: none;
-  color: var(--lm-text);
+  color: var(--drc-text);
   z-index: 1;
 }
 
@@ -24,7 +24,7 @@ label.active {
   top: 12px;
   left: 10px;
   font-size: 12px;
-  color: var(--lm-primary);
+  color: var(--drc-primary);
   font-weight: 700;
   margin: 0;
 }
@@ -98,11 +98,11 @@ label.active {
   flex-grow: 1;
   min-width: 80px;
   font-size: 14px;
-  color: var(--lm-text);
+  color: var(--drc-text);
 }
 
 .search-input::placeholder {
-  color: var(--lm-text-secondary);
+  color: var(--drc-text-secondary);
 }
 
 .arrow-down {
@@ -121,7 +121,7 @@ label.active {
   left: 0;
   width: 100%;
   background: var(--container-modal);
-  color: var(--lm-text);
+  color: var(--drc-text);
   border-radius: 8px;
   max-height: 200px;
   overflow-y: auto;
@@ -133,7 +133,7 @@ label.active {
 .option {
   padding: 12px;
   cursor: pointer;
-  color: var(--lm-text);
+  color: var(--drc-text);
   background: var(--container-modal);
   transition: background-color 0.3s ease, color 0.3s ease;
   display: flex;
@@ -144,24 +144,24 @@ label.active {
 .option:hover,
 .option.highlighted {
   background: #f0f0f0;
-  color: var(--lm-primary);
+  color: var(--drc-primary);
 }
 
 .option.selected {
-  background: var(--lm-primary);
+  background: var(--drc-primary);
   color: white;
 }
 
 .option.disabled {
   cursor: not-allowed;
   opacity: 0.6;
-  color: var(--lm-text-secondary);
+  color: var(--drc-text-secondary);
 }
 
 .option.add-new {
-  border-top: 1px solid var(--lm-border02);
+  border-top: 1px solid var(--drc-border02);
   font-weight: 600;
-  color: var(--lm-primary);
+  color: var(--drc-primary);
 }
 
 .option.add-new img {
@@ -170,7 +170,7 @@ label.active {
 }
 
 .no-options {
-  border: 1px solid var(--lm-border02);
+  border: 1px solid var(--drc-border02);
 }
 
 .select-dropdown.disabled {

@@ -143,11 +143,11 @@ export class DetalhesEmpresaComponent implements OnInit {
       }
     };
 
-    adicionarColaboradores(this.empresa.contabil, Setor.CONTABIL);
-    adicionarColaboradores(this.empresa.fiscal, Setor.FISCAL);
-    adicionarColaboradores(this.empresa.financeiro, Setor.FINANCEIRO);
-    adicionarColaboradores(this.empresa.paralegal, Setor.PARALEGAL);
-    adicionarColaboradores(this.empresa.pessoal, Setor.PESSOAL);
+    adicionarColaboradores(this.empresa.contabil, Setor.FRONTEND);
+    adicionarColaboradores(this.empresa.fiscal, Setor.BACKEND);
+    adicionarColaboradores(this.empresa.financeiro, Setor.FULLSTACK);
+    adicionarColaboradores(this.empresa.paralegal, Setor.DEVOPS);
+    adicionarColaboradores(this.empresa.pessoal, Setor.UI_UX_DESIGN);
   }
 
   get totalItens() {

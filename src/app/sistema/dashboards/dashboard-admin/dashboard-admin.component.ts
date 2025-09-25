@@ -483,11 +483,11 @@ export class DashboardAdminComponent implements OnInit {
   carregarResumoAtividadesSetores(): void {
     const dataInicio = this.getDataInicioAno();
     const setores = [
-      Setor.CONTABIL,
-      Setor.FISCAL,
-      Setor.PESSOAL,
-      Setor.PARALEGAL,
-      Setor.FINANCEIRO,
+      Setor.FRONTEND,
+      Setor.BACKEND,
+      Setor.FULLSTACK,
+      Setor.UI_UX_DESIGN,
+      Setor.DEVOPS,
     ];
 
     const requests = setores.map((setor) =>
