@@ -6,8 +6,8 @@ import {
   ViewEncapsulation,
 } from '@angular/core';
 import { Notificacao } from './notificacao';
-import { Setor } from '../administrativo/cadastro-de-colaborador/setor';
-import { SetorDescricao } from '../administrativo/cadastro-de-colaborador/setor-descricao';
+import { Setor } from '../administrativo/cadastro-de-colaborador/enums/setor';
+import { SetorDescricao } from '../administrativo/cadastro-de-colaborador/enums/setor-descricao';
 import { NotificacaoService } from 'src/app/services/feedback/notificacao.service';
 import { FeedbackComponent } from 'src/app/shared/feedback/feedback.component';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
@@ -102,8 +102,7 @@ export class NotificacoesComponent implements OnInit, OnDestroy {
       next: (contador) => {
         this.contadorNaoLidas = contador;
       },
-      error: (error) => {
-      },
+      error: (error) => {},
     });
   }
 
@@ -143,7 +142,6 @@ export class NotificacoesComponent implements OnInit, OnDestroy {
 
     this.notificacaoService.marcarTodasComoLidas().subscribe({
       next: (quantidadeMarcadas: number) => {
-
         // Marcar todas como lidas localmente
         this.notificacoes.forEach((notificacao) => {
           notificacao.lida = true;
@@ -254,7 +252,6 @@ export class NotificacoesComponent implements OnInit, OnDestroy {
       .getNotificacoesTempoReal()
       .subscribe({
         next: (notificacao: Notificacao) => {
-
           this.notificacoes.unshift(notificacao);
 
           this.aplicarFiltros();

@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Noticia } from './noticia';
-import { Setor } from '../../administrativo/cadastro-de-colaborador/setor';
-import { SetorDescricao } from '../../administrativo/cadastro-de-colaborador/setor-descricao';
+import { Setor } from '../../administrativo/cadastro-de-colaborador/enums/setor';
+import { SetorDescricao } from '../../administrativo/cadastro-de-colaborador/enums/setor-descricao';
 import { NoticiaService } from 'src/app/services/gerenciamento/noticia.service';
 import { TipoNoticia, TipoNoticiaCor } from './enums/tipo-noticia';
 import { TipoNoticiaDescricao } from './enums/tipo-noticia-descricao';

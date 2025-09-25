@@ -4,7 +4,7 @@ import { environment } from 'src/environments/environment';
 import { Observable, throwError } from 'rxjs';
 import { catchError, map } from 'rxjs/operators';
 import { DashboardAtividadesPorSetorResponseDTO } from 'src/app/sistema/dashboards/dashboard-admin/models/atividades-por-setor';
-import { Setor } from 'src/app/sistema/administrativo/cadastro-de-colaborador/setor';
+import { Setor } from 'src/app/sistema/administrativo/cadastro-de-colaborador/enums/setor';
 
 @Injectable({
   providedIn: 'root',

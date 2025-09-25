@@ -1,4 +1,4 @@
-import { Setor } from '../../administrativo/cadastro-de-colaborador/setor';
+import { Setor } from '../../administrativo/cadastro-de-colaborador/enums/setor';
 
 export class Processo {
   id!: string;
@@ -8,5 +8,5 @@ export class Processo {
   setor!: Setor;
   dependeDeOutroSetor!: string;
   setorDeDependencia!: Setor | null;
-  subprocessos!: { tarefa: string; id: number; checked: boolean }[];;
+  subprocessos!: { tarefa: string; id: number; checked: boolean }[];
 }

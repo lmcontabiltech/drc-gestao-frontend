@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ThemeService } from '../../services/modo-escuro/theme.service';
 import { Location } from '@angular/common';
 import { ColaboradoresService } from 'src/app/services/administrativo/colaboradores.service';
-import { Setor } from '../administrativo/cadastro-de-colaborador/setor';
-import { SetorDescricao } from '../administrativo/cadastro-de-colaborador/setor-descricao';
+import { Setor } from '../administrativo/cadastro-de-colaborador/enums/setor';
+import { SetorDescricao } from '../administrativo/cadastro-de-colaborador/enums/setor-descricao';
 import { ErrorMessageService } from 'src/app/services/feedback/error-message.service';
 
 @Component({

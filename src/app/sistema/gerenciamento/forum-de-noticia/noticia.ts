@@ -1,4 +1,4 @@
-import { Setor } from '../../administrativo/cadastro-de-colaborador/setor';
+import { Setor } from '../../administrativo/cadastro-de-colaborador/enums/setor';
 
 export class Noticia {
   id!: string;

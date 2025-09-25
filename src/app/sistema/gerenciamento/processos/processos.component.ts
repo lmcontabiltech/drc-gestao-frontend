@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Processo } from './processo';
-import { Setor } from '../../administrativo/cadastro-de-colaborador/setor';
+import { Setor } from '../../administrativo/cadastro-de-colaborador/enums/setor';
 import { ProcessoService } from 'src/app/services/gerenciamento/processo.service';
 import { ModalDeleteService } from 'src/app/services/modal/modal-deletar.service';
-import { SetorDescricao } from '../../administrativo/cadastro-de-colaborador/setor-descricao';
+import { SetorDescricao } from '../../administrativo/cadastro-de-colaborador/enums/setor-descricao';
 
 @Component({
   selector: 'app-processos',

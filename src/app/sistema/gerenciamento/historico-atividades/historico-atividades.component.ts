@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { SetorDescricao } from '../../administrativo/cadastro-de-colaborador/setor-descricao';
-import { Setor } from '../../administrativo/cadastro-de-colaborador/setor';
+import { SetorDescricao } from '../../administrativo/cadastro-de-colaborador/enums/setor-descricao';
+import { Setor } from '../../administrativo/cadastro-de-colaborador/enums/setor';
 import { HistoricoAtividade } from './historico';
 import { AuthService } from 'src/app/services/auth.service';
 import { AtividadeService } from 'src/app/services/gerenciamento/atividade.service';

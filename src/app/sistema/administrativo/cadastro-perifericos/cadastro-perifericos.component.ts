@@ -6,8 +6,8 @@ import { ColaboradoresService } from 'src/app/services/administrativo/colaborado
 import { AuthService } from 'src/app/services/auth.service';
 import { Periferico } from '../perifericos/periferico';
 import { PerifericoService } from 'src/app/services/administrativo/periferico.service';
-import { Setor } from '../cadastro-de-colaborador/setor';
-import { SetorDescricao } from '../cadastro-de-colaborador/setor-descricao';
+import { Setor } from '../cadastro-de-colaborador/enums/setor';
+import { SetorDescricao } from '../cadastro-de-colaborador/enums/setor-descricao';
 
 @Component({
   selector: 'app-cadastro-perifericos',

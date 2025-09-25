@@ -4,7 +4,7 @@ import { ColaboradoresService } from 'src/app/services/administrativo/colaborado
 import { ExchangeService } from 'src/app/services/exchange.service';
 import { RegimeDaEmpresa } from '../../administrativo/empresas/enums/regime-da-empresa';
 import { RegimeDaEmpresaDescricao } from '../../administrativo/empresas/enums/regime-da-empresa-descricao';
-import { Setor } from '../../administrativo/cadastro-de-colaborador/setor';
+import { Setor } from '../../administrativo/cadastro-de-colaborador/enums/setor';
 import {
   GraficoFuncionariosPorSetor,
   FuncionarioPorSetor,

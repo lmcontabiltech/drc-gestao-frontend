@@ -2,13 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
 import { ActivatedRoute, Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Setor } from './setor';
-import { SetorDescricao } from './setor-descricao';
+import { Setor } from './enums/setor';
+import { SetorDescricao } from './enums/setor-descricao';
 import { ColaboradoresService } from '../../../services/administrativo/colaboradores.service';
 import { Usuario } from '../../../login/usuario';
 import { AuthService } from 'src/app/services/auth.service';
-import { Permissao } from './permissao';
-import { PermissaoDescricao } from './permissao-descricao';
+import { Permissao } from './enums/permissao';
+import { PermissaoDescricao } from './enums/permissao-descricao';
 
 @Component({
   selector: 'app-cadastro-de-colaborador',
@@ -24,7 +24,7 @@ export class CadastroDeColaboradorComponent implements OnInit {
   permissoes = Object.keys(Permissao).map((key) => ({
     value: Permissao[key as keyof typeof Permissao],
     description: PermissaoDescricao[Permissao[key as keyof typeof Permissao]],
-  }))
+  }));
 
   cadastroForm: FormGroup;
   isLoading = false;
@@ -61,6 +61,8 @@ export class CadastroDeColaboradorComponent implements OnInit {
       permissao: ['USER', Validators.required],
       setor: ['', Validators.required],
       status: ['ATIVO', Validators.required],
+      cpf: [''],
+      dataNascimento: [''],
     });
   }
 
@@ -97,7 +99,7 @@ export class CadastroDeColaboradorComponent implements OnInit {
     this.successMessage = null;
     this.errorMessage = null;
     this.cadastroForm.get('setor')?.setValue(this.selectedSetor);
-    this.cadastroForm.get('permissao')?.setValue(this.selectedPermissao)
+    this.cadastroForm.get('permissao')?.setValue(this.selectedPermissao);
 
     const usuario: Usuario = {
       ...this.cadastroForm.value,
@@ -163,7 +165,7 @@ export class CadastroDeColaboradorComponent implements OnInit {
 
   private carregarModoEdicao(): void {
     this.cadastroForm.get('setor')?.setValue(this.selectedSetor);
-    this.cadastroForm.get('permissao')?.setValue(this.selectedPermissao)
+    this.cadastroForm.get('permissao')?.setValue(this.selectedPermissao);
     this.colaboradorId = this.route.snapshot.paramMap.get('id');
     if (this.colaboradorId) {
       this.isEditMode = true;

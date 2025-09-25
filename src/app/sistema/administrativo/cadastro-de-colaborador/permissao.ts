@@ -1,5 +1,0 @@
-export enum Permissao {
-    COORDENADOR = 'COORDENADOR',
-    COLABORADOR = 'COLABORADOR',
-    ESTAGIARIO = 'ESTAGIARIO',
-}

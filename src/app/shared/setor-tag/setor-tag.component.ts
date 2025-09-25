@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Setor } from '../../sistema/administrativo/cadastro-de-colaborador/setor';
-import { SetorDescricao } from '../../sistema/administrativo/cadastro-de-colaborador/setor-descricao';
+import { Setor } from '../../sistema/administrativo/cadastro-de-colaborador/enums/setor';
+import { SetorDescricao } from 'src/app/sistema/administrativo/cadastro-de-colaborador/enums/setor-descricao';
 
 @Component({
   selector: 'app-setor-tag',

@@ -1,4 +1,4 @@
-import { Setor } from 'src/app/sistema/administrativo/cadastro-de-colaborador/setor';
+import { Setor } from 'src/app/sistema/administrativo/cadastro-de-colaborador/enums/setor';
 
 export interface MultaTipo {
   key: string;

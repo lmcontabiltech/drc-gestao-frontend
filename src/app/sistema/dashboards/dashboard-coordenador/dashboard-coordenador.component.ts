@@ -9,7 +9,7 @@ import {
 import { AuthService } from 'src/app/services/auth.service';
 import { DashboardColaboradorService } from 'src/app/services/graficos/dashboard-colaborador.service';
 import { DashboardAtividadesPorSetorResponseDTO } from '../dashboard-admin/models/atividades-por-setor';
-import { Setor } from '../../administrativo/cadastro-de-colaborador/setor';
+import { Setor } from '../../administrativo/cadastro-de-colaborador/enums/setor';
 
 @Component({
   selector: 'app-dashboard-coordenador',

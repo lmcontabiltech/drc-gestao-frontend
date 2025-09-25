@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Colaborador } from './colaborador';
-import { Setor } from '../cadastro-de-colaborador/setor';
-import { SetorDescricao } from '../cadastro-de-colaborador/setor-descricao';
+import { Setor } from '../cadastro-de-colaborador/enums/setor';
+import { SetorDescricao } from '../cadastro-de-colaborador/enums/setor-descricao';
 import { ColaboradoresService } from '../../../services/administrativo/colaboradores.service';
 import { AuthService } from 'src/app/services/auth.service';
 import { ModalDeleteService } from 'src/app/services/modal/modal-deletar.service';

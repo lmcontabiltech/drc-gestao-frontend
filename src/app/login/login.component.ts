@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { AuthService } from '../services/auth.service';
 import { Usuario } from './usuario';
 import { Permissao } from './permissao';
-import { Setor } from '../sistema/administrativo/cadastro-de-colaborador/setor';
+import { Setor } from '../sistema/administrativo/cadastro-de-colaborador/enums/setor';
 import { ThemeService } from '../services/modo-escuro/theme.service';
 
 @Component({
@@ -44,8 +44,8 @@ export class LoginComponent {
   };
 
   constructor(
-    private router: Router, 
-    private authService: AuthService, 
+    private router: Router,
+    private authService: AuthService,
     private themeService: ThemeService
   ) {}
 
@@ -54,10 +54,10 @@ export class LoginComponent {
       (response: any) => {
         const access_token = response.access_token;
         localStorage.setItem('access_token', access_token);
-  
+
         const userId = this.authService.getUserIdFromToken() ?? '';
         localStorage.setItem('user_id', userId || '');
-  
+
         const usuario: Usuario = {
           id: userId,
           fotoUrl: null,
@@ -67,14 +67,15 @@ export class LoginComponent {
           nome: response.nome || '',
           confirmPassword: '',
           tipoUsuario: '',
-          permissao: response.authorities.length > 0 ? response.authorities[0] : null,
+          permissao:
+            response.authorities.length > 0 ? response.authorities[0] : null,
           setor: response.setor || null,
           darkMode: response.darkMode || false,
         };
         localStorage.setItem('usuario', JSON.stringify(usuario));
-  
+
         this.themeService.loadDarkModeFromServer();
-  
+
         switch (usuario.permissao) {
           case Permissao.ADMIN:
             this.router.navigate(['/usuario/dashboard-admin']);
@@ -95,7 +96,7 @@ export class LoginComponent {
         this.errors = ['Usuário e/ou senha incorreto(s).'];
       }
     );
-  }  
+  }
 
   preparaCadastrar(event: Event) {
     event.preventDefault();

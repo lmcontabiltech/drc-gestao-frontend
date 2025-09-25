@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Prioridade } from 'src/app/sistema/gerenciamento/atividades/enums/prioridade';
-import { Setor } from 'src/app/sistema/administrativo/cadastro-de-colaborador/setor';
+import { Setor } from 'src/app/sistema/administrativo/cadastro-de-colaborador/enums/setor';
 import { StatusDescricao } from 'src/app/sistema/gerenciamento/atividades/enums/status-descricao';
 import {
   MULTAS_TIPO,

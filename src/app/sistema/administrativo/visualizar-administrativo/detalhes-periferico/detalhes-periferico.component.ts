@@ -3,7 +3,7 @@ import { Location } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 import { PerifericoService } from 'src/app/services/administrativo/periferico.service';
 import { Periferico } from '../../perifericos/periferico';
-import { Setor } from '../../cadastro-de-colaborador/setor';
+import { Setor } from '../../cadastro-de-colaborador/enums/setor';
 
 @Component({
   selector: 'app-detalhes-periferico',

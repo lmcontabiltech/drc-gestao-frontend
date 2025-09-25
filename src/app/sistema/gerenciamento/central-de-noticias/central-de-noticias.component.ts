@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Noticia } from '../forum-de-noticia/noticia';
-import { Setor } from '../../administrativo/cadastro-de-colaborador/setor';
-import { SetorDescricao } from '../../administrativo/cadastro-de-colaborador/setor-descricao';
+import { Setor } from '../../administrativo/cadastro-de-colaborador/enums/setor';
+import { SetorDescricao } from '../../administrativo/cadastro-de-colaborador/enums/setor-descricao';
 import { NoticiaService } from 'src/app/services/gerenciamento/noticia.service';
 import { ModalDeleteService } from 'src/app/services/modal/modal-deletar.service';
 

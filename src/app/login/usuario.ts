@@ -1,4 +1,4 @@
-import { Setor } from '../sistema/administrativo/cadastro-de-colaborador/setor';
+import { Setor } from '../sistema/administrativo/cadastro-de-colaborador/enums/setor';
 import { Permissao } from './permissao';
 
 export class Usuario {
