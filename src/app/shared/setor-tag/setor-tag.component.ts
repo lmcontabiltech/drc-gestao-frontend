@@ -29,25 +29,25 @@ export class SetorTagComponent {
       case Setor.FRONTEND:
         return '#DBBAE6';
       case Setor.PROFESSOR_UFC:
-        return '#1F337F';
+        return '#C9DEF9';
       case Setor.MONITOR:
-        return '#4a59a0';
+        return '#D5E6C5';
       case Setor.BACKEND:
         return '#BABBE6';
       case Setor.FULLSTACK:
         return '#F9E8C9';
       case Setor.DEVOPS:
-        return '#2C3E50';
+        return '#C9F9F1';
       case Setor.QA:
-        return '#34495E';
+        return '#DBF9C9';
       case Setor.PROCESSOS:
-        return '#6A3BCE';
+        return '#F9F7C9';
       case Setor.REQUISITOS:
-        return '#0984E3';
+        return '#F9C9CA';
       case Setor.UI_UX_DESIGN:
         return '#F9C9E6';
       case Setor.CONSULTOR:
-        return '#217f94ff';
+        return '#EAEAEA';
       default:
         return '#CCD0DE';
     }

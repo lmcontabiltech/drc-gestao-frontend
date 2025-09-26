@@ -43,6 +43,10 @@ export class CadastroDeColaboradorComponent implements OnInit {
     confirmPassword: false,
   };
 
+  documento: File | null = null;
+  selectedDocumento: {[key: string]:File | null} = {};
+  documentoPreview: string | ArrayBuffer | null = null;
+
   constructor(
     private location: Location,
     private formBuilder: FormBuilder,
@@ -151,6 +155,18 @@ export class CadastroDeColaboradorComponent implements OnInit {
       );
     }
   }
+
+onArquivosSelecionados(
+    arquivos: (File | { id: number; name: string; documentoUrl: string })[]
+  ): void {
+    this.selectedArquivos = arquivos;
+    this.cadastroForm.get('documentos')?.setValue(arquivos);
+    console.log('Arquivos selecionados:', arquivos);
+  }
+selectedArquivos: (
+    | File
+    | { documentoUrl: string; id: number; name: string }
+  )[] = [];
 
   togglePasswordVisibility(field: string) {
     this.passwordVisible[field] = !this.passwordVisible[field];
