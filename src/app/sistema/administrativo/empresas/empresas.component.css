@@ -85,7 +85,7 @@ td {
 }
 
 th {
-  background: var(--drc-accent);
+  background: #252525;
   font-weight: 500;
   font-size: 16px;
   color: var(--drc-branco);
@@ -235,7 +235,7 @@ tr:hover {
   font-size: 16px;
   font-weight: 500;
   color: var(--drc-branco);
-  background-color: var(--drc-accent);
+  background-color: #848484;
   border: none;
   border-radius: 8px;
   cursor: pointer;
