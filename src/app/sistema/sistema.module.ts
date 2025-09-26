@@ -36,6 +36,10 @@ import { FilialEmpresaComponent } from './administrativo/filial-empresa/filial-e
 import { CadastroFilialEmpresaComponent } from './administrativo/cadastro-filial-empresa/cadastro-filial-empresa.component';
 import { CentralDeNoticiasComponent } from './gerenciamento/central-de-noticias/central-de-noticias.component';
 import { DetalhesNoticiaComponent } from './gerenciamento/visualizar-gerenciamento/detalhes-noticia/detalhes-noticia.component';
+import { AgendaComponent } from './gerenciamento/agenda/agenda.component';
+import { RelatorioComponent } from './gerenciamento/relatorio/relatorio.component';
+import { LaboratorioComponent } from './gerenciamento/laboratorio/laboratorio.component';
+import { EsteiraDeProcessosComponent } from './gerenciamento/esteira-de-processos/esteira-de-processos.component';
 
 
 @NgModule({
@@ -71,6 +75,10 @@ import { DetalhesNoticiaComponent } from './gerenciamento/visualizar-gerenciamen
     CadastroFilialEmpresaComponent,
     CentralDeNoticiasComponent,
     DetalhesNoticiaComponent,
+    AgendaComponent,
+    RelatorioComponent,
+    LaboratorioComponent,
+    EsteiraDeProcessosComponent,
   ],
   imports:[
     CommonModule, 

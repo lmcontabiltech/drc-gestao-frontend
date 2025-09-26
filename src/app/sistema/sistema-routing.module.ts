@@ -33,6 +33,10 @@ import { FilialEmpresaComponent } from './administrativo/filial-empresa/filial-e
 import { DetalhesFilialEmpresaComponent } from './administrativo/visualizar-administrativo/detalhes-filial-empresa/detalhes-filial-empresa.component';
 import { CentralDeNoticiasComponent } from './gerenciamento/central-de-noticias/central-de-noticias.component';
 import { DetalhesNoticiaComponent } from './gerenciamento/visualizar-gerenciamento/detalhes-noticia/detalhes-noticia.component';
+import { AgendaComponent } from './gerenciamento/agenda/agenda.component';
+import { RelatorioComponent } from './gerenciamento/relatorio/relatorio.component';
+import { LaboratorioComponent } from './gerenciamento/laboratorio/laboratorio.component';
+import { EsteiraDeProcessosComponent } from './gerenciamento/esteira-de-processos/esteira-de-processos.component';
 
 const routes: Routes = [
   {  path: 'usuario', 
@@ -80,6 +84,10 @@ const routes: Routes = [
       { path: 'cadastro-de-processos/:id', component: CadastroDeProcessosComponent},
       { path: 'fluxos', component: FluxosComponent},
       { path: 'detalhes-fluxo/:id', component: DetalhesFluxoComponent},	
+      { path: 'agenda', component: AgendaComponent},
+      { path: 'relatorio', component: RelatorioComponent},
+      { path: 'laboratorio', component: LaboratorioComponent},
+      { path: 'esteira-de-processos', component: EsteiraDeProcessosComponent},
     ] 
   }
 ];
